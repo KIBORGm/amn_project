@@ -111,7 +111,7 @@ background-color: qlineargradient(spread:pad, x1:0, y1:0, x2:0.869, y2:0.403818,
          </font>
         </property>
         <property name="text">
-         <string>Login</string>
+         <string>ВХОД</string>
         </property>
         <property name="alignment">
          <set>Qt::AlignCenter</set>
@@ -138,7 +138,7 @@ background-color: qlineargradient(spread:pad, x1:0, y1:0, x2:0.869, y2:0.403818,
           <item row="1" column="1">
            <widget class="QPushButton" name="pushButton">
             <property name="text">
-             <string>forgot password?</string>
+             <string>Забыли пароль?</string>
             </property>
             <property name="flat">
              <bool>true</bool>
@@ -163,7 +163,7 @@ background-color: qlineargradient(spread:pad, x1:0, y1:0, x2:0.869, y2:0.403818,
             <item row="0" column="0">
              <widget class="QLabel" name="label_2">
               <property name="text">
-               <string>Username:</string>
+               <string>Логин:</string>
               </property>
              </widget>
             </item>
@@ -179,7 +179,7 @@ padding: 2;</string>
             <item row="2" column="0">
              <widget class="QLabel" name="label_3">
               <property name="text">
-               <string>Password:</string>
+               <string>Пароль:</string>
               </property>
              </widget>
             </item>
@@ -211,7 +211,7 @@ QPushButton:hover:pressed{
 }</string>
           </property>
           <property name="text">
-           <string>LOGIN</string>
+           <string>Войти</string>
           </property>
          </widget>
         </item>
@@ -235,7 +235,7 @@ QPushButton:hover:pressed{
         <item>
          <widget class="QLabel" name="label_4">
           <property name="text">
-           <string>or sign up using</string>
+           <string>нет аккаунта?</string>
           </property>
           <property name="alignment">
            <set>Qt::AlignCenter</set>
@@ -248,7 +248,7 @@ QPushButton:hover:pressed{
         <item alignment="Qt::AlignHCenter">
          <widget class="QPushButton" name="pushButton_3">
           <property name="text">
-           <string>SIGN UP</string>
+           <string>РЕГЕСТРАЦИЯ</string>
           </property>
           <property name="flat">
            <bool>true</bool>
