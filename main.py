@@ -8,7 +8,7 @@ class win_enter(enter.Ui_Form, QtWidgets.QWidget):
 	def __init__(self):
 		super().__init__()
 		self.setupUi(self)
-		self.pb_reg.clicked.connect()
+		self.pb_reg.clicked.connect(self.show_reg_win)
 
 	def show_reg_win(self):
 		#temp
