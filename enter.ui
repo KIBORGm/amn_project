@@ -197,7 +197,7 @@ padding: 2;</string>
          </layout>
         </item>
         <item>
-         <widget class="QPushButton" name="pushButton_2">
+         <widget class="QPushButton" name="pb_enter">
           <property name="styleSheet">
            <string notr="true">QPushButton{
 background-color: qlineargradient(spread:pad, x1:0, y1:0, x2:0.869, y2:0.403818, stop:0 rgba(46, 183, 169, 255), stop:1 rgba(255, 146, 255, 255));
@@ -246,7 +246,7 @@ QPushButton:hover:pressed{
          </widget>
         </item>
         <item alignment="Qt::AlignHCenter">
-         <widget class="QPushButton" name="pushButton_3">
+         <widget class="QPushButton" name="pb_reg">
           <property name="text">
            <string>РЕГЕСТРАЦИЯ</string>
           </property>
