@@ -23,7 +23,7 @@ def get_data(login):  # Получает данные пользователя �
     username = res['username']
     pwd = res['pwd']
     ab_me = res['about_me'] #Обо мне
-    return hobby, username, pwd
+    return hobby, username, pwd, ab_me
 
 
 def delete_data(login):  # Удаляет данные из users по логину
