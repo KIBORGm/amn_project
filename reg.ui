@@ -1,0 +1,375 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<ui version="4.0">
+ <class>Form</class>
+ <widget class="QWidget" name="Form">
+  <property name="geometry">
+   <rect>
+    <x>0</x>
+    <y>0</y>
+    <width>441</width>
+    <height>575</height>
+   </rect>
+  </property>
+  <property name="windowTitle">
+   <string>Form</string>
+  </property>
+  <property name="styleSheet">
+   <string notr="true">#Form{
+background-color: qlineargradient(spread:pad, x1:0, y1:0, x2:0.869, y2:0.403818, stop:0 rgba(46, 183, 169, 255), stop:1 rgba(255, 146, 255, 255));
+}
+QLabel{
+	
+	font: 10pt &quot;Gadugi&quot;;
+}
+</string>
+  </property>
+  <layout class="QGridLayout" name="gridLayout">
+   <property name="leftMargin">
+    <number>50</number>
+   </property>
+   <property name="topMargin">
+    <number>50</number>
+   </property>
+   <property name="rightMargin">
+    <number>50</number>
+   </property>
+   <property name="bottomMargin">
+    <number>50</number>
+   </property>
+   <item row="0" column="0">
+    <widget class="QFrame" name="frame_main">
+     <property name="styleSheet">
+      <string notr="true">#frame_main{
+	border-radius: 12;
+	background-color: rgb(255, 255, 255);
+}</string>
+     </property>
+     <property name="frameShape">
+      <enum>QFrame::StyledPanel</enum>
+     </property>
+     <property name="frameShadow">
+      <enum>QFrame::Raised</enum>
+     </property>
+     <layout class="QVBoxLayout" name="verticalLayout">
+      <item>
+       <layout class="QHBoxLayout" name="horizontalLayout" stretch="1,10,1">
+        <item>
+         <widget class="QPushButton" name="pushButton">
+          <property name="styleSheet">
+           <string notr="true"/>
+          </property>
+          <property name="text">
+           <string/>
+          </property>
+          <property name="icon">
+           <iconset>
+            <normaloff>icons/arrow_back.png</normaloff>icons/arrow_back.png</iconset>
+          </property>
+          <property name="flat">
+           <bool>true</bool>
+          </property>
+         </widget>
+        </item>
+        <item alignment="Qt::AlignHCenter|Qt::AlignVCenter">
+         <widget class="QLabel" name="label">
+          <property name="enabled">
+           <bool>true</bool>
+          </property>
+          <property name="font">
+           <font>
+            <family>Gadugi</family>
+            <pointsize>16</pointsize>
+            <weight>9</weight>
+            <italic>false</italic>
+            <bold>false</bold>
+           </font>
+          </property>
+          <property name="styleSheet">
+           <string notr="true">font: 75 16pt &quot;Gadugi&quot;;</string>
+          </property>
+          <property name="text">
+           <string>РЕГИСТРАЦИЯ</string>
+          </property>
+          <property name="alignment">
+           <set>Qt::AlignCenter</set>
+          </property>
+         </widget>
+        </item>
+        <item>
+         <spacer name="horizontalSpacer">
+          <property name="orientation">
+           <enum>Qt::Horizontal</enum>
+          </property>
+          <property name="sizeHint" stdset="0">
+           <size>
+            <width>40</width>
+            <height>20</height>
+           </size>
+          </property>
+         </spacer>
+        </item>
+       </layout>
+      </item>
+      <item>
+       <widget class="QLabel" name="label_2">
+        <property name="font">
+         <font>
+          <family>Gadugi</family>
+          <pointsize>10</pointsize>
+          <weight>50</weight>
+          <italic>false</italic>
+          <bold>false</bold>
+         </font>
+        </property>
+        <property name="text">
+         <string>Придумайте логин:</string>
+        </property>
+       </widget>
+      </item>
+      <item>
+       <widget class="QLineEdit" name="le_login">
+        <property name="styleSheet">
+         <string notr="true">border-radius: 5;
+border: 1px solid qlineargradient(spread:pad, x1:0, y1:0, x2:0.869, y2:0.403818, stop:0 rgba(46, 183, 169, 255), stop:1 rgba(255, 146, 255, 255));
+padding: 2;</string>
+        </property>
+       </widget>
+      </item>
+      <item>
+       <widget class="QLabel" name="label_4">
+        <property name="font">
+         <font>
+          <family>Gadugi</family>
+          <pointsize>10</pointsize>
+          <weight>50</weight>
+          <italic>false</italic>
+          <bold>false</bold>
+         </font>
+        </property>
+        <property name="text">
+         <string>Укажите имя:</string>
+        </property>
+       </widget>
+      </item>
+      <item>
+       <widget class="QLineEdit" name="le_name">
+        <property name="styleSheet">
+         <string notr="true">border-radius: 5;
+border: 1px solid qlineargradient(spread:pad, x1:0, y1:0, x2:0.869, y2:0.403818, stop:0 rgba(46, 183, 169, 255), stop:1 rgba(255, 146, 255, 255));
+padding: 2;</string>
+        </property>
+       </widget>
+      </item>
+      <item>
+       <widget class="QLabel" name="label_3">
+        <property name="font">
+         <font>
+          <family>Gadugi</family>
+          <pointsize>10</pointsize>
+          <weight>50</weight>
+          <italic>false</italic>
+          <bold>false</bold>
+         </font>
+        </property>
+        <property name="text">
+         <string>Придумайте пароль:</string>
+        </property>
+       </widget>
+      </item>
+      <item>
+       <widget class="QLineEdit" name="le_pwd">
+        <property name="styleSheet">
+         <string notr="true">border-radius: 5;
+border: 1px solid qlineargradient(spread:pad, x1:0, y1:0, x2:0.869, y2:0.403818, stop:0 rgba(46, 183, 169, 255), stop:1 rgba(255, 146, 255, 255));
+padding: 2;</string>
+        </property>
+       </widget>
+      </item>
+      <item>
+       <widget class="QLabel" name="label_5">
+        <property name="font">
+         <font>
+          <family>Gadugi</family>
+          <pointsize>10</pointsize>
+          <weight>50</weight>
+          <italic>false</italic>
+          <bold>false</bold>
+         </font>
+        </property>
+        <property name="text">
+         <string>Повторите пароль:</string>
+        </property>
+       </widget>
+      </item>
+      <item>
+       <widget class="QLineEdit" name="le_r_pwd">
+        <property name="styleSheet">
+         <string notr="true">border-radius: 5;
+border: 1px solid qlineargradient(spread:pad, x1:0, y1:0, x2:0.869, y2:0.403818, stop:0 rgba(46, 183, 169, 255), stop:1 rgba(255, 146, 255, 255));
+padding: 2;</string>
+        </property>
+       </widget>
+      </item>
+      <item>
+       <widget class="QLabel" name="label_6">
+        <property name="font">
+         <font>
+          <family>Gadugi</family>
+          <pointsize>10</pointsize>
+          <weight>50</weight>
+          <italic>false</italic>
+          <bold>false</bold>
+         </font>
+        </property>
+        <property name="styleSheet">
+         <string notr="true"/>
+        </property>
+        <property name="text">
+         <string>Укажите хобби:</string>
+        </property>
+       </widget>
+      </item>
+      <item>
+       <widget class="QComboBox" name="cb_hobby">
+        <property name="styleSheet">
+         <string notr="true">QComboBox{
+border-radius: 5;
+border: 1px solid qlineargradient(spread:pad, x1:0, y1:0, x2:0.869, y2:0.403818, stop:0 rgba(46, 183, 169, 255), stop:1 rgba(255, 146, 255, 255));
+padding: 2;
+}
+QComboBox::drop-down { 
+height: 0px;                    
+width: 0px;
+					
+                     }</string>
+        </property>
+        <property name="iconSize">
+         <size>
+          <width>16</width>
+          <height>16</height>
+         </size>
+        </property>
+        <property name="frame">
+         <bool>true</bool>
+        </property>
+        <item>
+         <property name="text">
+          <string>Не выбрано</string>
+         </property>
+        </item>
+        <item>
+         <property name="text">
+          <string>Путешествия</string>
+         </property>
+        </item>
+        <item>
+         <property name="text">
+          <string>Спорт</string>
+         </property>
+        </item>
+        <item>
+         <property name="text">
+          <string>Исскуство</string>
+         </property>
+        </item>
+        <item>
+         <property name="text">
+          <string>Пение</string>
+         </property>
+        </item>
+        <item>
+         <property name="text">
+          <string>Танцы</string>
+         </property>
+        </item>
+        <item>
+         <property name="text">
+          <string>Настольные игры</string>
+         </property>
+        </item>
+        <item>
+         <property name="text">
+          <string>Компьютерные игры</string>
+         </property>
+        </item>
+        <item>
+         <property name="text">
+          <string>Чтение</string>
+         </property>
+        </item>
+        <item>
+         <property name="text">
+          <string>Другое</string>
+         </property>
+        </item>
+       </widget>
+      </item>
+      <item>
+       <widget class="QLabel" name="label_7">
+        <property name="text">
+         <string>Расскажите о себе:</string>
+        </property>
+       </widget>
+      </item>
+      <item>
+       <widget class="QPlainTextEdit" name="pte_about">
+        <property name="styleSheet">
+         <string notr="true">border-radius: 5;
+border: 1px solid qlineargradient(spread:pad, x1:0, y1:0, x2:0.869, y2:0.403818, stop:0 rgba(46, 183, 169, 255), stop:1 rgba(255, 146, 255, 255));
+padding: 2;</string>
+        </property>
+       </widget>
+      </item>
+      <item>
+       <spacer name="verticalSpacer_4">
+        <property name="orientation">
+         <enum>Qt::Vertical</enum>
+        </property>
+        <property name="sizeHint" stdset="0">
+         <size>
+          <width>17</width>
+          <height>13</height>
+         </size>
+        </property>
+       </spacer>
+      </item>
+      <item>
+       <widget class="QPushButton" name="pb_next">
+        <property name="styleSheet">
+         <string notr="true">QPushButton{
+background-color: qlineargradient(spread:pad, x1:0, y1:0, x2:0.869, y2:0.403818, stop:0 rgba(46, 183, 169, 255), stop:1 rgba(255, 146, 255, 255));
+border: none;
+border-radius: 10;
+padding: 7;
+}
+QPushButton:hover:pressed{
+	background-color: qlineargradient(spread:pad, x1:0, y1:0, x2:1, y2:1, stop:0 rgba(0, 16, 225, 255), stop:1 rgba(255, 72, 255, 255));
+	color:  white;
+}</string>
+        </property>
+        <property name="text">
+         <string>Продолжить</string>
+        </property>
+       </widget>
+      </item>
+      <item>
+       <spacer name="verticalSpacer_3">
+        <property name="orientation">
+         <enum>Qt::Vertical</enum>
+        </property>
+        <property name="sizeHint" stdset="0">
+         <size>
+          <width>20</width>
+          <height>14</height>
+         </size>
+        </property>
+       </spacer>
+      </item>
+     </layout>
+    </widget>
+   </item>
+  </layout>
+ </widget>
+ <resources/>
+ <connections/>
+</ui>
