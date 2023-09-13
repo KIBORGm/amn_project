@@ -22,12 +22,10 @@ def get_data(login):  # Получает данные пользователя �
     hobby = res['hobby']
     username = res['username']
     pwd = res['pwd']
-    # ab_me = res['about_me'] #Обо мне
+    ab_me = res['about_me'] #Обо мне
     return hobby, username, pwd
 
 
 def delete_data(login):  # Удаляет данные из users по логину
     db_url = "https://amn-project-b3b8c-default-rtdb.europe-west1.firebasedatabase.app/users/"
     requests.delete(f"{db_url}/{login}.json").json()
-
-print(get_data("KIBORGm")[0])
