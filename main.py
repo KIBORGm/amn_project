@@ -13,7 +13,7 @@ class win_enter(enter.Ui_Form, QtWidgets.QWidget):
 	def show_reg_win(self):
 		#temp
 		msg = QtWidgets.QMessageBox()
-		msg.setText("у никиты разъебано очко")
+		msg.setText("Окно регистрации")
 		msg.exec_()
 
 if __name__ == "__main__":
