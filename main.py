@@ -47,11 +47,12 @@ class win_reg(reg.Ui_Form, QtWidgets.QWidget):
 			msg.setText("Пароли не совпадают")
 			msg.exec_()
 		else:
-			username=self.le_name.text()
-			login=self.le_login.text()
-			pwd=self.le_pwd.text()
-			hobby=self.cb_hobby.currentIndex()
-			about_me=self.pte_about.toPlainText()
+			username = self.le_name.text()
+			login    = self.le_login.text()
+			pwd      = self.le_pwd.text()
+			hobby    = self.cb_hobby.currentIndex()
+			about_me = self.pte_about.toPlainText()
+
 			print(username)
 			print(login)
 			print(pwd)
@@ -65,6 +66,9 @@ class win_reg(reg.Ui_Form, QtWidgets.QWidget):
 				about_me=about_me
 			)
 
+			msg = QtWidgets.QMessageBox()
+			msg.setText("Учетная запись успешно создана, теперь вы можете войти")
+			msg.exec_()
 
 	def back_to_enter(self):
 		self.enter_win = win_enter()
@@ -78,6 +82,8 @@ class win_main(main_win.Ui_Form, QtWidgets.QWidget):
 		self.user = user
 		super().__init__()
 		self.setupUi(self)
+		with open("data/entered.txt", "r") as f:
+			self.stackedWidget.setCurrentIndex(int(f.read()))
 
 		self.pb_profile.clicked.connect(lambda: self.stackedWidget.setCurrentWidget(self.pg_profile))
 		self.pb_anon.clicked.connect(lambda: self.stackedWidget.setCurrentWidget(self.pg_anon))
@@ -85,11 +91,23 @@ class win_main(main_win.Ui_Form, QtWidgets.QWidget):
 		self.pb_groups.clicked.connect(lambda: self.stackedWidget.setCurrentWidget(self.pg_groups))
 		self.pushButton.clicked.connect(lambda: self.stackedWidget.setCurrentWidget(self.pg_options))
 
-		self.le_login.setPlaceholderText(user["login"])
+		self.label_11.setText(f"Редактирование профиля {user['login']}:")
 		self.le_pwd.setPlaceholderText(user["pwd"])
 		self.le_name.setPlaceholderText(user["username"])
 		self.cb_hobby.setCurrentIndex(user["hobby"])
 		self.pte_about.setPlaceholderText(user["ab_me"])
+
+		self.pushButton_2.clicked.connect(self.edit_profile)
+		self.comboBox.currentIndexChanged.connect(self.show_hello_page)
+
+
+	def edit_profile(self):
+		...
+
+	def show_hello_page(self):
+		with open("data/entered.txt", "w") as f:
+			f.write(str(self.comboBox.currentIndex()))
+
 
 if __name__ == "__main__":
     app = QtWidgets.QApplication(sys.argv)

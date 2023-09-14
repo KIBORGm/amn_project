@@ -20,7 +20,7 @@
 }
 </string>
   </property>
-  <layout class="QHBoxLayout" name="horizontalLayout" stretch="1,4">
+  <layout class="QHBoxLayout" name="horizontalLayout" stretch="1,5">
    <property name="spacing">
     <number>0</number>
    </property>
@@ -49,6 +49,9 @@
      </property>
      <property name="frameShadow">
       <enum>QFrame::Raised</enum>
+     </property>
+     <property name="lineWidth">
+      <number>0</number>
      </property>
      <layout class="QVBoxLayout" name="verticalLayout">
       <item alignment="Qt::AlignHCenter|Qt::AlignTop">
@@ -79,10 +82,13 @@
          <item>
           <widget class="QLabel" name="label">
            <property name="styleSheet">
-            <string notr="true">font: 10pt &quot;Gadugi&quot;;</string>
+            <string notr="true">font: 11pt &quot;Gadugi&quot;;</string>
            </property>
            <property name="text">
-            <string>Социальный компаньон</string>
+            <string>СОЦИАЛЬНЫЙ КОМПАНЬОН</string>
+           </property>
+           <property name="wordWrap">
+            <bool>true</bool>
            </property>
           </widget>
          </item>
@@ -335,32 +341,7 @@ font: 15pt &quot;MS Sans Serif&quot;;</string>
                   <item>
                    <widget class="QLabel" name="label_11">
                     <property name="text">
-                     <string>Редактирование профиля:</string>
-                    </property>
-                   </widget>
-                  </item>
-                  <item>
-                   <widget class="QLabel" name="label_12">
-                    <property name="font">
-                     <font>
-                      <family>Gadugi</family>
-                      <pointsize>10</pointsize>
-                      <weight>50</weight>
-                      <italic>false</italic>
-                      <bold>false</bold>
-                     </font>
-                    </property>
-                    <property name="text">
-                     <string>Логин:</string>
-                    </property>
-                   </widget>
-                  </item>
-                  <item>
-                   <widget class="QLineEdit" name="le_login">
-                    <property name="styleSheet">
-                     <string notr="true">border-radius: 5;
-border: 1px solid qlineargradient(spread:pad, x1:0, y1:0, x2:0.869, y2:0.403818, stop:0 rgba(46, 183, 169, 255), stop:1 rgba(255, 146, 255, 255));
-padding: 2;</string>
+                     <string>Редактирование профиля {profile_login}:</string>
                     </property>
                    </widget>
                   </item>
@@ -853,18 +834,96 @@ font: 15pt &quot;MS Sans Serif&quot;;</string>
             <property name="frameShadow">
              <enum>QFrame::Raised</enum>
             </property>
-            <layout class="QFormLayout" name="formLayout">
-             <item row="0" column="0">
-              <widget class="QRadioButton" name="radioButton">
-               <property name="font">
-                <font>
-                 <pointsize>10</pointsize>
-                </font>
+            <layout class="QVBoxLayout" name="verticalLayout_16">
+             <item>
+              <widget class="QFrame" name="frame_2">
+               <property name="frameShape">
+                <enum>QFrame::StyledPanel</enum>
                </property>
-               <property name="text">
-                <string>Показывать приветственное сообщение</string>
+               <property name="frameShadow">
+                <enum>QFrame::Raised</enum>
                </property>
+               <layout class="QHBoxLayout" name="horizontalLayout_5">
+                <item>
+                 <widget class="QLabel" name="label_12">
+                  <property name="font">
+                   <font>
+                    <family>Gadugi</family>
+                    <pointsize>10</pointsize>
+                    <weight>50</weight>
+                    <italic>false</italic>
+                    <bold>false</bold>
+                   </font>
+                  </property>
+                  <property name="styleSheet">
+                   <string notr="true"/>
+                  </property>
+                  <property name="text">
+                   <string>Страница по умолчанию при открытии приложения:</string>
+                  </property>
+                 </widget>
+                </item>
+                <item>
+                 <widget class="QComboBox" name="comboBox">
+                  <property name="styleSheet">
+                   <string notr="true">QComboBox{
+border-radius: 5;
+border: 1px solid qlineargradient(spread:pad, x1:0, y1:0, x2:0.869, y2:0.403818, stop:0 rgba(46, 183, 169, 255), stop:1 rgba(255, 146, 255, 255));
+padding: 2;
+}
+QComboBox::drop-down { 
+height: 0px;                    
+width: 0px;
+					
+                     }</string>
+                  </property>
+                  <item>
+                   <property name="text">
+                    <string>Приветственное сообщение</string>
+                   </property>
+                  </item>
+                  <item>
+                   <property name="text">
+                    <string>Профиль</string>
+                   </property>
+                  </item>
+                  <item>
+                   <property name="text">
+                    <string>Группы</string>
+                   </property>
+                  </item>
+                  <item>
+                   <property name="text">
+                    <string>Анонимные чаты</string>
+                   </property>
+                  </item>
+                  <item>
+                   <property name="text">
+                    <string>Проф. Консультации</string>
+                   </property>
+                  </item>
+                  <item>
+                   <property name="text">
+                    <string>Настройки</string>
+                   </property>
+                  </item>
+                 </widget>
+                </item>
+               </layout>
               </widget>
+             </item>
+             <item>
+              <spacer name="verticalSpacer">
+               <property name="orientation">
+                <enum>Qt::Vertical</enum>
+               </property>
+               <property name="sizeHint" stdset="0">
+                <size>
+                 <width>20</width>
+                 <height>40</height>
+                </size>
+               </property>
+              </spacer>
              </item>
             </layout>
            </widget>

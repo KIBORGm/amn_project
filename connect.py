@@ -23,7 +23,6 @@ def get_user_by_login(login):  # Получает данные пользова�
         "ab_me": ab_me
     }
 
-
 def delete_user_by_login(login):  # Удаляет данные из users по логину
     db_url = "https://amn-project-b3b8c-default-rtdb.europe-west1.firebasedatabase.app/users/"
     requests.delete(f"{db_url}/{login}.json").json()
