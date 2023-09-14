@@ -10,9 +10,9 @@ class User:
         self.hobby = hobby
 
 
-def load_data(username, login, pwd, hobby):  # Загружает данные пользователя в users
+def load_data(username, login, pwd, hobby, about_me):  # Загружает данные пользователя в users
     db_url = "https://amn-project-b3b8c-default-rtdb.europe-west1.firebasedatabase.app/users/.json"
-    json_data = {login: {"pwd": pwd, "username": username, "hobby": hobby}}
+    json_data = {login: {"pwd": pwd, "username": username, "hobby": hobby, "about_me": about_me}}
     requests.patch(url=db_url, json=json_data)
 
 
@@ -22,8 +22,22 @@ def get_data(login):  # Получает данные пользователя �
     hobby = res['hobby']
     username = res['username']
     pwd = res['pwd']
+    ab_me = res['about_me'] #Обо мне
+    return hobby, username, pwd, ab_me
 
 
 def delete_data(login):  # Удаляет данные из users по логину
     db_url = "https://amn-project-b3b8c-default-rtdb.europe-west1.firebasedatabase.app/users/"
-    res = requests.delete(f"{db_url}/{login}.json").json()
+    requests.delete(f"{db_url}/{login}.json").json()
+
+
+def create_group(gr_name, login, ab_gr="Без описания"):  # Создаёт группу с 1-м начальным пользователем (владельцем)
+    db_url = "https://amn-project-b3b8c-default-rtdb.europe-west1.firebasedatabase.app/groups"
+    json_data = {gr_name: {"users": {"user": login}, "ab_gr": ab_gr}}
+    requests.patch(url=f"{db_url}.json", json=json_data)
+
+
+def add_to_group(gr_name, login):  # Добавляет пользователя в группу
+    db_url = f"https://amn-project-b3b8c-default-rtdb.europe-west1.firebasedatabase.app/groups/{gr_name}/users/"
+    json_data = {login: "user"}
+    requests.patch(url=f"{db_url}.json", json=json_data)
