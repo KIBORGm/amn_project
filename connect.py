@@ -41,3 +41,14 @@ def add_to_group(gr_name, login):  # Добавляет пользователя
     db_url = f"https://amn-project-b3b8c-default-rtdb.europe-west1.firebasedatabase.app/groups/{gr_name}/users/"
     json_data = {login: "user"}
     requests.patch(url=f"{db_url}.json", json=json_data)
+
+
+def delete_group(gr_name):  # Удаляет группу
+    db_url = "https://amn-project-b3b8c-default-rtdb.europe-west1.firebasedatabase.app/groups"
+    requests.delete(f"{db_url}/{gr_name}.json").json()
+
+
+def check_login(login):  # Проверяет наличие пользователя в БД
+    db_url = "https://amn-project-b3b8c-default-rtdb.europe-west1.firebasedatabase.app/users"
+    res = requests.get(f"{db_url}/{login}.json").json()
+    return False if res == None else True
