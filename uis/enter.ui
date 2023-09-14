@@ -168,7 +168,7 @@ background-color: qlineargradient(spread:pad, x1:0, y1:0, x2:0.869, y2:0.403818,
              </widget>
             </item>
             <item row="1" column="0">
-             <widget class="QLineEdit" name="le_username">
+             <widget class="QLineEdit" name="le_login">
               <property name="styleSheet">
                <string notr="true">border-radius: 5;
 border: 1px solid qlineargradient(spread:pad, x1:0, y1:0, x2:0.869, y2:0.403818, stop:0 rgba(46, 183, 169, 255), stop:1 rgba(255, 146, 255, 255));

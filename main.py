@@ -13,6 +13,14 @@ class win_enter(enter.Ui_Form, QtWidgets.QWidget):
 		super().__init__()
 		self.setupUi(self)
 		self.pb_reg.clicked.connect(self.show_reg_win)
+		self.pb_enter.clicked.connect(self.login)
+
+	def login(self):
+		user = connect.get_user_by_login(self.le_login.text())
+		if user["login"] == self.le_login.text() and user["pwd"] == self.le_password.text():
+			self.master_win = win_main()
+			self.master_win.show()
+			self.close()
 
 	def show_reg_win(self):
 		self.reg_win = win_reg()

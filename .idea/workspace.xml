@@ -4,14 +4,12 @@
     <option name="autoReloadType" value="SELECTIVE" />
   </component>
   <component name="ChangeListManager">
-    <list default="true" id="8cf6518c-4a11-455c-95f2-d42a80fee73a" name="Changes" comment="huy bobra">
+    <list default="true" id="8cf6518c-4a11-455c-95f2-d42a80fee73a" name="Changes" comment="analnie terki bobra">
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/connect.py" beforeDir="false" afterPath="$PROJECT_DIR$/connect.py" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/enter.ui" beforeDir="false" afterPath="$PROJECT_DIR$/uis/enter.ui" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/grp_widget.ui" beforeDir="false" afterPath="$PROJECT_DIR$/uis/grp_widget.ui" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/enter.py" beforeDir="false" afterPath="$PROJECT_DIR$/enter.py" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/main.py" beforeDir="false" afterPath="$PROJECT_DIR$/main.py" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/main_win.ui" beforeDir="false" afterPath="$PROJECT_DIR$/uis/main_win.ui" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/reg.ui" beforeDir="false" afterPath="$PROJECT_DIR$/uis/reg.ui" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/uis/enter.ui" beforeDir="false" afterPath="$PROJECT_DIR$/uis/enter.ui" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -170,7 +168,15 @@
       <option name="project" value="LOCAL" />
       <updated>1694680760591</updated>
     </task>
-    <option name="localTasksCounter" value="5" />
+    <task id="LOCAL-00005" summary="analnie terki bobra">
+      <option name="closed" value="true" />
+      <created>1694685112025</created>
+      <option name="number" value="00005" />
+      <option name="presentableId" value="LOCAL-00005" />
+      <option name="project" value="LOCAL" />
+      <updated>1694685112025</updated>
+    </task>
+    <option name="localTasksCounter" value="6" />
     <servers />
   </component>
   <component name="Vcs.Log.Tabs.Properties">
@@ -201,6 +207,7 @@
     <MESSAGE value="dohuya mnogo dobavil" />
     <MESSAGE value="pizda bobra" />
     <MESSAGE value="huy bobra" />
-    <option name="LAST_COMMIT_MESSAGE" value="huy bobra" />
+    <MESSAGE value="analnie terki bobra" />
+    <option name="LAST_COMMIT_MESSAGE" value="analnie terki bobra" />
   </component>
 </project>

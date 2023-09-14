@@ -15,7 +15,13 @@ def get_user_by_login(login):  # Получает данные пользова�
     username = res['username']
     pwd = res['pwd']
     ab_me = res['about_me'] #Обо мне
-    return hobby, username, pwd, ab_me
+    return {
+        "login": login,
+        "pwd": pwd,
+        "username": username,
+        "hobby": hobby,
+        "ab_me": ab_me
+    }
 
 
 def delete_user_by_login(login):  # Удаляет данные из users по логину
