@@ -88,7 +88,7 @@ class win_main(main_win.Ui_Form, QtWidgets.QWidget):
 		self.le_login.setPlaceholderText(user["login"])
 		self.le_pwd.setPlaceholderText(user["pwd"])
 		self.le_name.setPlaceholderText(user["username"])
-		# self.cb_hobby.setCurrentIndex(user["hobby"])
+		self.cb_hobby.setCurrentIndex(user["hobby"])
 		self.pte_about.setPlaceholderText(user["ab_me"])
 
 if __name__ == "__main__":
