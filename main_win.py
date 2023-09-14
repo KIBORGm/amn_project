@@ -1,6 +1,6 @@
 # -*- coding: utf-8 -*-
 
-# Form implementation generated from reading ui file '.\main_win.ui'
+# Form implementation generated from reading ui file '.\uis\main_win.ui'
 #
 # Created by: PyQt5 UI code generator 5.15.9
 #
@@ -35,6 +35,7 @@ class Ui_Form(object):
         self.verticalLayout = QtWidgets.QVBoxLayout(self.frame_menu)
         self.verticalLayout.setObjectName("verticalLayout")
         self.frame = QtWidgets.QFrame(self.frame_menu)
+        self.frame.setStyleSheet("border: None;")
         self.frame.setFrameShape(QtWidgets.QFrame.StyledPanel)
         self.frame.setFrameShadow(QtWidgets.QFrame.Raised)
         self.frame.setObjectName("frame")
@@ -42,7 +43,7 @@ class Ui_Form(object):
         self.horizontalLayout_2.setObjectName("horizontalLayout_2")
         self.label_2 = QtWidgets.QLabel(self.frame)
         self.label_2.setText("")
-        self.label_2.setPixmap(QtGui.QPixmap(".\\icons/main_ico.png"))
+        self.label_2.setPixmap(QtGui.QPixmap(".\\uis\\../icons/main_ico.png"))
         self.label_2.setObjectName("label_2")
         self.horizontalLayout_2.addWidget(self.label_2)
         self.label = QtWidgets.QLabel(self.frame)
@@ -73,9 +74,10 @@ class Ui_Form(object):
 "#frame_btns{\n"
 "    padding-left: 30;\n"
 "    padding-right: 30;\n"
+"    border: None;\n"
 "}")
         self.frame_btns.setFrameShape(QtWidgets.QFrame.StyledPanel)
-        self.frame_btns.setFrameShadow(QtWidgets.QFrame.Raised)
+        self.frame_btns.setFrameShadow(QtWidgets.QFrame.Plain)
         self.frame_btns.setObjectName("frame_btns")
         self.verticalLayout_2 = QtWidgets.QVBoxLayout(self.frame_btns)
         self.verticalLayout_2.setSpacing(20)
@@ -99,6 +101,7 @@ class Ui_Form(object):
         self.verticalLayout_2.addWidget(self.pushButton)
         self.verticalLayout.addWidget(self.frame_btns, 0, QtCore.Qt.AlignVCenter)
         self.frame_3 = QtWidgets.QFrame(self.frame_menu)
+        self.frame_3.setStyleSheet("border: None;")
         self.frame_3.setFrameShape(QtWidgets.QFrame.StyledPanel)
         self.frame_3.setFrameShadow(QtWidgets.QFrame.Raised)
         self.frame_3.setObjectName("frame_3")
@@ -434,9 +437,24 @@ class Ui_Form(object):
         self.verticalLayout_10.addWidget(self.label_8)
         self.verticalLayout_8.addWidget(self.frame_top_opt)
         self.frame_12 = QtWidgets.QFrame(self.pg_options)
+        font = QtGui.QFont()
+        font.setFamily("Futura Bk BT")
+        font.setPointSize(10)
+        self.frame_12.setFont(font)
+        self.frame_12.setStyleSheet("Qlabel{\n"
+"    font: 24pt \"Gadugi\";\n"
+"}")
         self.frame_12.setFrameShape(QtWidgets.QFrame.StyledPanel)
         self.frame_12.setFrameShadow(QtWidgets.QFrame.Raised)
         self.frame_12.setObjectName("frame_12")
+        self.formLayout = QtWidgets.QFormLayout(self.frame_12)
+        self.formLayout.setObjectName("formLayout")
+        self.radioButton = QtWidgets.QRadioButton(self.frame_12)
+        font = QtGui.QFont()
+        font.setPointSize(10)
+        self.radioButton.setFont(font)
+        self.radioButton.setObjectName("radioButton")
+        self.formLayout.setWidget(0, QtWidgets.QFormLayout.LabelRole, self.radioButton)
         self.verticalLayout_8.addWidget(self.frame_12)
         self.verticalLayout_8.setStretch(0, 1)
         self.verticalLayout_8.setStretch(1, 12)
@@ -447,7 +465,7 @@ class Ui_Form(object):
         self.horizontalLayout.setStretch(1, 4)
 
         self.retranslateUi(Form)
-        self.stackedWidget.setCurrentIndex(0)
+        self.stackedWidget.setCurrentIndex(5)
         QtCore.QMetaObject.connectSlotsByName(Form)
 
     def retranslateUi(self, Form):
@@ -491,6 +509,7 @@ class Ui_Form(object):
         self.label_7.setText(_translate("Form", "КОНСУЛЬТАЦИИ СО СПЕЦИАЛИСТОМ"))
         self.label_10.setText(_translate("Form", "В Разработке"))
         self.label_8.setText(_translate("Form", "НАСТРОЙКИ"))
+        self.radioButton.setText(_translate("Form", "Показывать приветственное сообщение"))
 
 
 if __name__ == "__main__":

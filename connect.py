@@ -4,7 +4,7 @@ import json
 
 def post_new_user(username, login, pwd, hobby, about_me):  # Загружает данные пользователя в users
     db_url = "https://amn-project-b3b8c-default-rtdb.europe-west1.firebasedatabase.app/users/.json"
-    json_data = {login: {"pwd": pwd, "username": username, "hobby": hobby, "about_me": about_me}}
+    json_data = {login: {"pwd": pwd, "username": username, "hobby": int(hobby), "about_me": about_me}}
     requests.patch(url=db_url, json=json_data)
 
 
