@@ -248,7 +248,7 @@ QPushButton:hover:pressed{
         <item alignment="Qt::AlignHCenter">
          <widget class="QPushButton" name="pb_reg">
           <property name="text">
-           <string>РЕГЕСТРАЦИЯ</string>
+           <string>РЕГИСТРАЦИЯ</string>
           </property>
           <property name="flat">
            <bool>true</bool>

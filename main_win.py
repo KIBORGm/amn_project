@@ -26,7 +26,7 @@ class Ui_Form(object):
         self.horizontalLayout.setObjectName("horizontalLayout")
         self.frame_menu = QtWidgets.QFrame(Form)
         self.frame_menu.setStyleSheet("#frame_menu{\n"
-"    \n"
+"    border: None;\n"
 "    background-color: qlineargradient(spread:pad, x1:0, y1:0, x2:0.869, y2:0.403818, stop:0 rgba(46, 183, 169, 255), stop:1 rgba(255, 146, 255, 255));\n"
 "}")
         self.frame_menu.setFrameShape(QtWidgets.QFrame.StyledPanel)

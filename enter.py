@@ -133,7 +133,7 @@ class Ui_Form(object):
         self.label_3.setText(_translate("Form", "Пароль:"))
         self.pb_enter.setText(_translate("Form", "Войти"))
         self.label_4.setText(_translate("Form", "нет аккаунта?"))
-        self.pb_reg.setText(_translate("Form", "РЕГЕСТРАЦИЯ"))
+        self.pb_reg.setText(_translate("Form", "РЕГИСТРАЦИЯ"))
 
 
 if __name__ == "__main__":

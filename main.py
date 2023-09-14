@@ -16,12 +16,22 @@ class win_enter(enter.Ui_Form, QtWidgets.QWidget):
 		self.pb_enter.clicked.connect(self.login)
 
 	def login(self):
-		user = connect.get_user_by_login(self.le_login.text())
-		if user["login"] == self.le_login.text() and user["pwd"] == self.le_password.text():
-			self.master_win = win_main(user=user)
-			self.master_win.show()
-			self.close()
+		check = connect.check_login(self.le_login.text())
+		if check == False:
+			msg = QtWidgets.QMessageBox()
+			msg.setText("логин или пароль были введены неправильно, проверьте валидность введных данных и повторите попытку")
+			msg.exec_()
 
+		else:
+			user = connect.get_user_by_login(self.le_login.text())
+			if user["login"] == self.le_login.text() and user["pwd"] == self.le_password.text():
+				self.master_win = win_main(user=user)
+				self.master_win.show()
+				self.close()
+			else:
+				msg = QtWidgets.QMessageBox()
+				msg.setText("логин или пароль были введены неправильно, проверьте валидность введных данных и повторите попытку")
+				msg.exec_()
 	def show_reg_win(self):
 		self.reg_win = win_reg()
 		self.reg_win.show()

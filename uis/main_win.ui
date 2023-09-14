@@ -40,7 +40,7 @@
     <widget class="QFrame" name="frame_menu">
      <property name="styleSheet">
       <string notr="true">#frame_menu{
-	
+	border: None;
 	background-color: qlineargradient(spread:pad, x1:0, y1:0, x2:0.869, y2:0.403818, stop:0 rgba(46, 183, 169, 255), stop:1 rgba(255, 146, 255, 255));
 }</string>
      </property>
