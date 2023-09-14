@@ -29,3 +29,15 @@ def get_data(login):  # Получает данные пользователя �
 def delete_data(login):  # Удаляет данные из users по логину
     db_url = "https://amn-project-b3b8c-default-rtdb.europe-west1.firebasedatabase.app/users/"
     requests.delete(f"{db_url}/{login}.json").json()
+
+
+def create_group(gr_name, login, ab_gr="Без описания"):  # Создаёт группу с 1-м начальным пользователем (владельцем)
+    db_url = "https://amn-project-b3b8c-default-rtdb.europe-west1.firebasedatabase.app/groups"
+    json_data = {gr_name: {"users": {"user": login}, "ab_gr": ab_gr}}
+    requests.patch(url=f"{db_url}.json", json=json_data)
+
+
+def add_to_group(gr_name, login):  # Добавляет пользователя в группу
+    db_url = f"https://amn-project-b3b8c-default-rtdb.europe-west1.firebasedatabase.app/groups/{gr_name}/users/"
+    json_data = {login: "user"}
+    requests.patch(url=f"{db_url}.json", json=json_data)
