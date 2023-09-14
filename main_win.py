@@ -302,20 +302,68 @@ class Ui_Form(object):
         self.verticalLayout_5.setSpacing(0)
         self.verticalLayout_5.setObjectName("verticalLayout_5")
         self.frame_5 = QtWidgets.QFrame(self.pg_groups)
-        self.frame_5.setStyleSheet("\n"
+        self.frame_5.setStyleSheet("#frame_5{\n"
 "background-color: rgb(81, 81, 81);\n"
+"}\n"
+"QLabel{\n"
+"background-color: rgb(81, 81, 81);\n"
+"}\n"
 "\n"
-"")
+"QPushButton{\n"
+"color: qlineargradient(spread:pad, x1:0, y1:0, x2:0.869, y2:0.403818, stop:0 rgba(46, 183, 169, 255), stop:1 rgba(255, 146, 255, 255));\n"
+"background-color;\n"
+"border-radius: 10;\n"
+"padding: 7;\n"
+"}\n"
+"\n"
+"QPushButton:hover{\n"
+"color: qlineargradient(spread:pad, x1:0, y1:0, x2:1, y2:1, stop:0 rgba(14, 0, 255, 255), stop:1 rgba(0, 255, 104, 255));\n"
+"background-color:rgb(227, 227, 227);\n"
+"\n"
+"}\n"
+"\n"
+"QPushButton:hover:pressed{\n"
+"color:rgb(227, 227, 227) ;\n"
+"background-color: qlineargradient(spread:pad, x1:0, y1:0, x2:1, y2:1, stop:0 rgba(14, 0, 255, 255), stop:1 rgba(0, 255, 104, 255));\n"
+"}")
         self.frame_5.setFrameShape(QtWidgets.QFrame.StyledPanel)
         self.frame_5.setFrameShadow(QtWidgets.QFrame.Raised)
         self.frame_5.setObjectName("frame_5")
-        self.verticalLayout_12 = QtWidgets.QVBoxLayout(self.frame_5)
-        self.verticalLayout_12.setObjectName("verticalLayout_12")
+        self.horizontalLayout_6 = QtWidgets.QHBoxLayout(self.frame_5)
+        self.horizontalLayout_6.setObjectName("horizontalLayout_6")
+        self.pb_add_group = QtWidgets.QPushButton(self.frame_5)
+        self.pb_add_group.setStyleSheet("")
+        self.pb_add_group.setText("")
+        icon = QtGui.QIcon()
+        icon.addPixmap(QtGui.QPixmap(".\\uis\\../icons/group_add_FILL0_wght400_GRAD0_opsz24.png"), QtGui.QIcon.Normal, QtGui.QIcon.Off)
+        self.pb_add_group.setIcon(icon)
+        self.pb_add_group.setIconSize(QtCore.QSize(24, 24))
+        self.pb_add_group.setObjectName("pb_add_group")
+        self.horizontalLayout_6.addWidget(self.pb_add_group)
+        self.pb_del_group = QtWidgets.QPushButton(self.frame_5)
+        self.pb_del_group.setStyleSheet("border-radius: 8;\n"
+"border-color: qlineargradient(spread:pad, x1:0, y1:0, x2:0.869, y2:0.403818, stop:0 rgba(46, 183, 169, 255), stop:1 rgba(255, 146, 255, 255));\n"
+"border: 1px")
+        self.pb_del_group.setText("")
+        icon1 = QtGui.QIcon()
+        icon1.addPixmap(QtGui.QPixmap(".\\uis\\../icons/group_off_FILL0_wght400_GRAD0_opsz24 (1).png"), QtGui.QIcon.Normal, QtGui.QIcon.Off)
+        self.pb_del_group.setIcon(icon1)
+        self.pb_del_group.setIconSize(QtCore.QSize(24, 24))
+        self.pb_del_group.setObjectName("pb_del_group")
+        self.horizontalLayout_6.addWidget(self.pb_del_group, 0, QtCore.Qt.AlignHCenter|QtCore.Qt.AlignVCenter)
+        spacerItem = QtWidgets.QSpacerItem(40, 20, QtWidgets.QSizePolicy.Expanding, QtWidgets.QSizePolicy.Minimum)
+        self.horizontalLayout_6.addItem(spacerItem)
         self.label_5 = QtWidgets.QLabel(self.frame_5)
         self.label_5.setStyleSheet("color: rgb(255, 255, 255);\n"
 "font: 15pt \"MS Sans Serif\";")
         self.label_5.setObjectName("label_5")
-        self.verticalLayout_12.addWidget(self.label_5, 0, QtCore.Qt.AlignHCenter)
+        self.horizontalLayout_6.addWidget(self.label_5, 0, QtCore.Qt.AlignHCenter)
+        spacerItem1 = QtWidgets.QSpacerItem(40, 20, QtWidgets.QSizePolicy.Expanding, QtWidgets.QSizePolicy.Minimum)
+        self.horizontalLayout_6.addItem(spacerItem1)
+        self.horizontalLayout_6.setStretch(1, 1)
+        self.horizontalLayout_6.setStretch(2, 1)
+        self.horizontalLayout_6.setStretch(3, 4)
+        self.horizontalLayout_6.setStretch(4, 3)
         self.verticalLayout_5.addWidget(self.frame_5)
         self.frame_top_groups = QtWidgets.QFrame(self.pg_groups)
         self.frame_top_groups.setFrameShape(QtWidgets.QFrame.StyledPanel)
@@ -472,8 +520,8 @@ class Ui_Form(object):
         self.comboBox.addItem("")
         self.horizontalLayout_5.addWidget(self.comboBox)
         self.verticalLayout_16.addWidget(self.frame_2)
-        spacerItem = QtWidgets.QSpacerItem(20, 40, QtWidgets.QSizePolicy.Minimum, QtWidgets.QSizePolicy.Expanding)
-        self.verticalLayout_16.addItem(spacerItem)
+        spacerItem2 = QtWidgets.QSpacerItem(20, 40, QtWidgets.QSizePolicy.Minimum, QtWidgets.QSizePolicy.Expanding)
+        self.verticalLayout_16.addItem(spacerItem2)
         self.verticalLayout_8.addWidget(self.frame_12)
         self.verticalLayout_8.setStretch(0, 1)
         self.verticalLayout_8.setStretch(1, 12)
@@ -484,7 +532,7 @@ class Ui_Form(object):
         self.horizontalLayout.setStretch(1, 5)
 
         self.retranslateUi(Form)
-        self.stackedWidget.setCurrentIndex(5)
+        self.stackedWidget.setCurrentIndex(0)
         QtCore.QMetaObject.connectSlotsByName(Form)
 
     def retranslateUi(self, Form):

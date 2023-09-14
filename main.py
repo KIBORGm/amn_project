@@ -102,17 +102,33 @@ class win_main(main_win.Ui_Form, QtWidgets.QWidget):
 		self.pushButton.clicked.connect(lambda: self.stackedWidget.setCurrentWidget(self.pg_options))
 
 		self.label_11.setText(f"Редактирование профиля {user['login']}:")
-		self.le_pwd.setPlaceholderText(user["pwd"])
-		self.le_name.setPlaceholderText(user["username"])
+		self.le_name.setText(user["username"])
 		self.cb_hobby.setCurrentIndex(user["hobby"])
-		self.pte_about.setPlaceholderText(user["ab_me"])
+		self.pte_about.setPlainText(user["ab_me"])
 
 		self.pushButton_2.clicked.connect(self.edit_profile)
 		self.comboBox.currentIndexChanged.connect(self.show_hello_page)
 
 
 	def edit_profile(self):
-		...
+		if self.le_pwd.text() != self.le_r_pwd.text():
+			msg = QtWidgets.QMessageBox()
+			msg.setText("Пароли не совпадают")
+			msg.exec_()
+			return
+		else:
+			self.user["username"] = self.le_name.text() if self.le_name.text() != self.user["username"] else self.user["username"]
+			self.user["pwd"] = self.le_pwd.text() if self.le_pwd.text() != self.user["pwd"] else self.user["pwd"]
+			self.user["hobby"] = self.cb_hobby.currentIndex() if self.cb_hobby.currentIndex() != self.user["hobby"] else self.user["hobby"]
+			self.user["ab_me"] = self.pte_about.toPlainText() if self.pte_about.toPlainText() != self.user["ab_me"] else self.user["ab_me"]
+
+			connect.edit_user_by_login(
+				login=self.user["login"],
+				username=self.user["username"],
+				pwd=self.user["pwd"],
+				hobby=self.user["hobby"],
+				about_me=self.user["ab_me"]
+			)
 
 	def show_hello_page(self):
 		with open("data/entered.txt", "w") as f:

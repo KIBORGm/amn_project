@@ -232,7 +232,7 @@ background-color: qlineargradient(spread:pad, x1:0, y1:0, x2:1, y2:1, stop:0 rgb
          <enum>QFrame::Plain</enum>
         </property>
         <property name="currentIndex">
-         <number>5</number>
+         <number>0</number>
         </property>
         <widget class="QWidget" name="pg_hello">
          <layout class="QHBoxLayout" name="horizontalLayout_3">
@@ -587,10 +587,30 @@ background-color: qlineargradient(spread:pad, x1:0, y1:0, x2:1, y2:1, stop:0 rgb
           <item>
            <widget class="QFrame" name="frame_5">
             <property name="styleSheet">
-             <string notr="true">
+             <string notr="true">#frame_5{
 background-color: rgb(81, 81, 81);
+}
+QLabel{
+background-color: rgb(81, 81, 81);
+}
 
-</string>
+QPushButton{
+color: qlineargradient(spread:pad, x1:0, y1:0, x2:0.869, y2:0.403818, stop:0 rgba(46, 183, 169, 255), stop:1 rgba(255, 146, 255, 255));
+background-color;
+border-radius: 10;
+padding: 7;
+}
+
+QPushButton:hover{
+color: qlineargradient(spread:pad, x1:0, y1:0, x2:1, y2:1, stop:0 rgba(14, 0, 255, 255), stop:1 rgba(0, 255, 104, 255));
+background-color:rgb(227, 227, 227);
+
+}
+
+QPushButton:hover:pressed{
+color:rgb(227, 227, 227) ;
+background-color: qlineargradient(spread:pad, x1:0, y1:0, x2:1, y2:1, stop:0 rgba(14, 0, 255, 255), stop:1 rgba(0, 255, 104, 255));
+}</string>
             </property>
             <property name="frameShape">
              <enum>QFrame::StyledPanel</enum>
@@ -598,7 +618,62 @@ background-color: rgb(81, 81, 81);
             <property name="frameShadow">
              <enum>QFrame::Raised</enum>
             </property>
-            <layout class="QVBoxLayout" name="verticalLayout_12">
+            <layout class="QHBoxLayout" name="horizontalLayout_6" stretch="0,1,1,4,3">
+             <item>
+              <widget class="QPushButton" name="pb_add_group">
+               <property name="styleSheet">
+                <string notr="true"/>
+               </property>
+               <property name="text">
+                <string/>
+               </property>
+               <property name="icon">
+                <iconset>
+                 <normaloff>../icons/group_add_FILL0_wght400_GRAD0_opsz24.png</normaloff>../icons/group_add_FILL0_wght400_GRAD0_opsz24.png</iconset>
+               </property>
+               <property name="iconSize">
+                <size>
+                 <width>24</width>
+                 <height>24</height>
+                </size>
+               </property>
+              </widget>
+             </item>
+             <item alignment="Qt::AlignHCenter|Qt::AlignVCenter">
+              <widget class="QPushButton" name="pb_del_group">
+               <property name="styleSheet">
+                <string notr="true">border-radius: 8;
+border-color: qlineargradient(spread:pad, x1:0, y1:0, x2:0.869, y2:0.403818, stop:0 rgba(46, 183, 169, 255), stop:1 rgba(255, 146, 255, 255));
+border: 1px</string>
+               </property>
+               <property name="text">
+                <string/>
+               </property>
+               <property name="icon">
+                <iconset>
+                 <normaloff>../icons/group_off_FILL0_wght400_GRAD0_opsz24 (1).png</normaloff>../icons/group_off_FILL0_wght400_GRAD0_opsz24 (1).png</iconset>
+               </property>
+               <property name="iconSize">
+                <size>
+                 <width>24</width>
+                 <height>24</height>
+                </size>
+               </property>
+              </widget>
+             </item>
+             <item>
+              <spacer name="horizontalSpacer">
+               <property name="orientation">
+                <enum>Qt::Horizontal</enum>
+               </property>
+               <property name="sizeHint" stdset="0">
+                <size>
+                 <width>40</width>
+                 <height>20</height>
+                </size>
+               </property>
+              </spacer>
+             </item>
              <item alignment="Qt::AlignHCenter">
               <widget class="QLabel" name="label_5">
                <property name="styleSheet">
@@ -609,6 +684,19 @@ font: 15pt &quot;MS Sans Serif&quot;;</string>
                 <string>ГРУППЫ</string>
                </property>
               </widget>
+             </item>
+             <item>
+              <spacer name="horizontalSpacer_2">
+               <property name="orientation">
+                <enum>Qt::Horizontal</enum>
+               </property>
+               <property name="sizeHint" stdset="0">
+                <size>
+                 <width>40</width>
+                 <height>20</height>
+                </size>
+               </property>
+              </spacer>
              </item>
             </layout>
            </widget>
