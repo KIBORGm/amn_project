@@ -14,7 +14,7 @@ from PyQt5 import QtCore, QtGui, QtWidgets
 class Ui_Form(object):
     def setupUi(self, Form):
         Form.setObjectName("Form")
-        Form.resize(751, 580)
+        Form.resize(752, 523)
         Form.setStyleSheet("QLabel{\n"
 "    \n"
 "    font: 10pt \"Gadugi\";\n"
@@ -158,34 +158,150 @@ class Ui_Form(object):
         self.frame_4.setObjectName("frame_4")
         self.horizontalLayout_4 = QtWidgets.QHBoxLayout(self.frame_4)
         self.horizontalLayout_4.setObjectName("horizontalLayout_4")
-        self.frame_2 = QtWidgets.QFrame(self.frame_4)
-        self.frame_2.setFrameShape(QtWidgets.QFrame.StyledPanel)
-        self.frame_2.setFrameShadow(QtWidgets.QFrame.Raised)
-        self.frame_2.setObjectName("frame_2")
-        self.verticalLayout_16 = QtWidgets.QVBoxLayout(self.frame_2)
-        self.verticalLayout_16.setObjectName("verticalLayout_16")
-        self.frame_8 = QtWidgets.QFrame(self.frame_2)
-        self.frame_8.setFrameShape(QtWidgets.QFrame.StyledPanel)
-        self.frame_8.setFrameShadow(QtWidgets.QFrame.Raised)
-        self.frame_8.setObjectName("frame_8")
-        self.label_11 = QtWidgets.QLabel(self.frame_8)
-        self.label_11.setGeometry(QtCore.QRect(110, 130, 47, 13))
-        self.label_11.setText("")
-        self.label_11.setObjectName("label_11")
-        self.verticalLayout_16.addWidget(self.frame_8)
-        self.frame_9 = QtWidgets.QFrame(self.frame_2)
-        self.frame_9.setFrameShape(QtWidgets.QFrame.StyledPanel)
-        self.frame_9.setFrameShadow(QtWidgets.QFrame.Raised)
-        self.frame_9.setObjectName("frame_9")
-        self.verticalLayout_16.addWidget(self.frame_9)
-        self.horizontalLayout_4.addWidget(self.frame_2)
         self.frame_6 = QtWidgets.QFrame(self.frame_4)
         self.frame_6.setFrameShape(QtWidgets.QFrame.StyledPanel)
         self.frame_6.setFrameShadow(QtWidgets.QFrame.Raised)
         self.frame_6.setObjectName("frame_6")
+        self.verticalLayout_18 = QtWidgets.QVBoxLayout(self.frame_6)
+        self.verticalLayout_18.setObjectName("verticalLayout_18")
+        self.verticalLayout_17 = QtWidgets.QVBoxLayout()
+        self.verticalLayout_17.setObjectName("verticalLayout_17")
+        self.label_11 = QtWidgets.QLabel(self.frame_6)
+        self.label_11.setObjectName("label_11")
+        self.verticalLayout_17.addWidget(self.label_11)
+        self.label_12 = QtWidgets.QLabel(self.frame_6)
+        font = QtGui.QFont()
+        font.setFamily("Gadugi")
+        font.setPointSize(10)
+        font.setBold(False)
+        font.setItalic(False)
+        font.setWeight(50)
+        self.label_12.setFont(font)
+        self.label_12.setObjectName("label_12")
+        self.verticalLayout_17.addWidget(self.label_12)
+        self.le_login = QtWidgets.QLineEdit(self.frame_6)
+        self.le_login.setStyleSheet("border-radius: 5;\n"
+"border: 1px solid qlineargradient(spread:pad, x1:0, y1:0, x2:0.869, y2:0.403818, stop:0 rgba(46, 183, 169, 255), stop:1 rgba(255, 146, 255, 255));\n"
+"padding: 2;")
+        self.le_login.setObjectName("le_login")
+        self.verticalLayout_17.addWidget(self.le_login)
+        self.label_17 = QtWidgets.QLabel(self.frame_6)
+        font = QtGui.QFont()
+        font.setFamily("Gadugi")
+        font.setPointSize(10)
+        font.setBold(False)
+        font.setItalic(False)
+        font.setWeight(50)
+        self.label_17.setFont(font)
+        self.label_17.setObjectName("label_17")
+        self.verticalLayout_17.addWidget(self.label_17)
+        self.le_name = QtWidgets.QLineEdit(self.frame_6)
+        self.le_name.setStyleSheet("border-radius: 5;\n"
+"border: 1px solid qlineargradient(spread:pad, x1:0, y1:0, x2:0.869, y2:0.403818, stop:0 rgba(46, 183, 169, 255), stop:1 rgba(255, 146, 255, 255));\n"
+"padding: 2;")
+        self.le_name.setObjectName("le_name")
+        self.verticalLayout_17.addWidget(self.le_name)
+        self.label_13 = QtWidgets.QLabel(self.frame_6)
+        font = QtGui.QFont()
+        font.setFamily("Gadugi")
+        font.setPointSize(10)
+        font.setBold(False)
+        font.setItalic(False)
+        font.setWeight(50)
+        self.label_13.setFont(font)
+        self.label_13.setObjectName("label_13")
+        self.verticalLayout_17.addWidget(self.label_13)
+        self.le_pwd = QtWidgets.QLineEdit(self.frame_6)
+        self.le_pwd.setStyleSheet("border-radius: 5;\n"
+"border: 1px solid qlineargradient(spread:pad, x1:0, y1:0, x2:0.869, y2:0.403818, stop:0 rgba(46, 183, 169, 255), stop:1 rgba(255, 146, 255, 255));\n"
+"padding: 2;")
+        self.le_pwd.setObjectName("le_pwd")
+        self.verticalLayout_17.addWidget(self.le_pwd)
+        self.label_15 = QtWidgets.QLabel(self.frame_6)
+        font = QtGui.QFont()
+        font.setFamily("Gadugi")
+        font.setPointSize(10)
+        font.setBold(False)
+        font.setItalic(False)
+        font.setWeight(50)
+        self.label_15.setFont(font)
+        self.label_15.setObjectName("label_15")
+        self.verticalLayout_17.addWidget(self.label_15)
+        self.le_r_pwd = QtWidgets.QLineEdit(self.frame_6)
+        self.le_r_pwd.setStyleSheet("border-radius: 5;\n"
+"border: 1px solid qlineargradient(spread:pad, x1:0, y1:0, x2:0.869, y2:0.403818, stop:0 rgba(46, 183, 169, 255), stop:1 rgba(255, 146, 255, 255));\n"
+"padding: 2;")
+        self.le_r_pwd.setObjectName("le_r_pwd")
+        self.verticalLayout_17.addWidget(self.le_r_pwd)
+        self.label_14 = QtWidgets.QLabel(self.frame_6)
+        font = QtGui.QFont()
+        font.setFamily("Gadugi")
+        font.setPointSize(10)
+        font.setBold(False)
+        font.setItalic(False)
+        font.setWeight(50)
+        self.label_14.setFont(font)
+        self.label_14.setStyleSheet("")
+        self.label_14.setObjectName("label_14")
+        self.verticalLayout_17.addWidget(self.label_14)
+        self.cb_hobby = QtWidgets.QComboBox(self.frame_6)
+        self.cb_hobby.setStyleSheet("QComboBox{\n"
+"border-radius: 5;\n"
+"border: 1px solid qlineargradient(spread:pad, x1:0, y1:0, x2:0.869, y2:0.403818, stop:0 rgba(46, 183, 169, 255), stop:1 rgba(255, 146, 255, 255));\n"
+"padding: 2;\n"
+"}\n"
+"QComboBox::drop-down { \n"
+"height: 0px;                    \n"
+"width: 0px;\n"
+"                    \n"
+"                     }")
+        self.cb_hobby.setIconSize(QtCore.QSize(16, 16))
+        self.cb_hobby.setFrame(True)
+        self.cb_hobby.setObjectName("cb_hobby")
+        self.cb_hobby.addItem("")
+        self.cb_hobby.addItem("")
+        self.cb_hobby.addItem("")
+        self.cb_hobby.addItem("")
+        self.cb_hobby.addItem("")
+        self.cb_hobby.addItem("")
+        self.cb_hobby.addItem("")
+        self.cb_hobby.addItem("")
+        self.cb_hobby.addItem("")
+        self.cb_hobby.addItem("")
+        self.verticalLayout_17.addWidget(self.cb_hobby)
+        self.label_16 = QtWidgets.QLabel(self.frame_6)
+        self.label_16.setObjectName("label_16")
+        self.verticalLayout_17.addWidget(self.label_16)
+        self.pte_about = QtWidgets.QPlainTextEdit(self.frame_6)
+        self.pte_about.setStyleSheet("border-radius: 5;\n"
+"border: 1px solid qlineargradient(spread:pad, x1:0, y1:0, x2:0.869, y2:0.403818, stop:0 rgba(46, 183, 169, 255), stop:1 rgba(255, 146, 255, 255));\n"
+"padding: 2;")
+        self.pte_about.setObjectName("pte_about")
+        self.verticalLayout_17.addWidget(self.pte_about)
+        self.verticalLayout_18.addLayout(self.verticalLayout_17)
+        self.pushButton_2 = QtWidgets.QPushButton(self.frame_6)
+        self.pushButton_2.setStyleSheet("QPushButton{\n"
+"color: qlineargradient(spread:pad, x1:0, y1:0, x2:0.869, y2:0.403818, stop:0 rgba(46, 183, 169, 255), stop:1 rgba(255, 146, 255, 255));\n"
+"background-color:rgb(81, 81, 81);\n"
+"border-radius: 10;\n"
+"padding: 7;\n"
+"}\n"
+"\n"
+"QPushButton:hover{\n"
+"color: qlineargradient(spread:pad, x1:0, y1:0, x2:1, y2:1, stop:0 rgba(14, 0, 255, 255), stop:1 rgba(0, 255, 104, 255));\n"
+"background-color:rgb(227, 227, 227);\n"
+"\n"
+"}\n"
+"\n"
+"QPushButton:hover:pressed{\n"
+"color:rgb(227, 227, 227) ;\n"
+"background-color: qlineargradient(spread:pad, x1:0, y1:0, x2:1, y2:1, stop:0 rgba(14, 0, 255, 255), stop:1 rgba(0, 255, 104, 255));\n"
+"\n"
+"}")
+        self.pushButton_2.setObjectName("pushButton_2")
+        self.verticalLayout_18.addWidget(self.pushButton_2)
         self.horizontalLayout_4.addWidget(self.frame_6)
         self.horizontalLayout_4.setStretch(0, 1)
-        self.horizontalLayout_4.setStretch(1, 1)
         self.verticalLayout_4.addWidget(self.frame_4)
         self.verticalLayout_4.setStretch(0, 1)
         self.verticalLayout_4.setStretch(1, 12)
@@ -216,6 +332,8 @@ class Ui_Form(object):
         self.frame_top_groups.setFrameShape(QtWidgets.QFrame.StyledPanel)
         self.frame_top_groups.setFrameShadow(QtWidgets.QFrame.Raised)
         self.frame_top_groups.setObjectName("frame_top_groups")
+        self.layout_groups = QtWidgets.QVBoxLayout(self.frame_top_groups)
+        self.layout_groups.setObjectName("layout_groups")
         self.verticalLayout_5.addWidget(self.frame_top_groups)
         self.verticalLayout_5.setStretch(0, 1)
         self.verticalLayout_5.setStretch(1, 12)
@@ -329,7 +447,7 @@ class Ui_Form(object):
         self.horizontalLayout.setStretch(1, 4)
 
         self.retranslateUi(Form)
-        self.stackedWidget.setCurrentIndex(1)
+        self.stackedWidget.setCurrentIndex(0)
         QtCore.QMetaObject.connectSlotsByName(Form)
 
     def retranslateUi(self, Form):
@@ -349,6 +467,24 @@ class Ui_Form(object):
 "3.Записаться на консультацию профессионального психолога.\n"
 "4. Или, если Вы хотите оставить вашу личность в тайне, у нас есть Анонимный чат!"))
         self.label_4.setText(_translate("Form", "ПРОФИЛЬ"))
+        self.label_11.setText(_translate("Form", "Редактирование профиля:"))
+        self.label_12.setText(_translate("Form", "Логин:"))
+        self.label_17.setText(_translate("Form", "Имя:"))
+        self.label_13.setText(_translate("Form", "Пароль:"))
+        self.label_15.setText(_translate("Form", "Повторите пароль:"))
+        self.label_14.setText(_translate("Form", "Ваше основное хобби:"))
+        self.cb_hobby.setItemText(0, _translate("Form", "Не выбрано"))
+        self.cb_hobby.setItemText(1, _translate("Form", "Путешествия"))
+        self.cb_hobby.setItemText(2, _translate("Form", "Спорт"))
+        self.cb_hobby.setItemText(3, _translate("Form", "Исскуство"))
+        self.cb_hobby.setItemText(4, _translate("Form", "Пение"))
+        self.cb_hobby.setItemText(5, _translate("Form", "Танцы"))
+        self.cb_hobby.setItemText(6, _translate("Form", "Настольные игры"))
+        self.cb_hobby.setItemText(7, _translate("Form", "Компьютерные игры"))
+        self.cb_hobby.setItemText(8, _translate("Form", "Чтение"))
+        self.cb_hobby.setItemText(9, _translate("Form", "Другое"))
+        self.label_16.setText(_translate("Form", "О себе:"))
+        self.pushButton_2.setText(_translate("Form", "Подтвердить изменения"))
         self.label_5.setText(_translate("Form", "ГРУППЫ"))
         self.label_6.setText(_translate("Form", "АНОНИМНЫЕ ЧАТЫ"))
         self.label_9.setText(_translate("Form", "В Разработке"))
