@@ -4,7 +4,13 @@
     <option name="autoReloadType" value="SELECTIVE" />
   </component>
   <component name="ChangeListManager">
-    <list default="true" id="8cf6518c-4a11-455c-95f2-d42a80fee73a" name="Changes" comment="analnie terki bobra 2v" />
+    <list default="true" id="8cf6518c-4a11-455c-95f2-d42a80fee73a" name="Changes" comment="analnie terki bobra">
+      <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/connect.py" beforeDir="false" afterPath="$PROJECT_DIR$/connect.py" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/enter.py" beforeDir="false" afterPath="$PROJECT_DIR$/enter.py" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/main.py" beforeDir="false" afterPath="$PROJECT_DIR$/main.py" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/uis/enter.ui" beforeDir="false" afterPath="$PROJECT_DIR$/uis/enter.ui" afterDir="false" />
+    </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
     <option name="HIGHLIGHT_NON_ACTIVE_CHANGELIST" value="false" />
@@ -170,15 +176,7 @@
       <option name="project" value="LOCAL" />
       <updated>1694685112025</updated>
     </task>
-    <task id="LOCAL-00006" summary="analnie terki bobra 2v">
-      <option name="closed" value="true" />
-      <created>1694685745303</created>
-      <option name="number" value="00006" />
-      <option name="presentableId" value="LOCAL-00006" />
-      <option name="project" value="LOCAL" />
-      <updated>1694685745303</updated>
-    </task>
-    <option name="localTasksCounter" value="7" />
+    <option name="localTasksCounter" value="6" />
     <servers />
   </component>
   <component name="Vcs.Log.Tabs.Properties">
@@ -210,7 +208,6 @@
     <MESSAGE value="pizda bobra" />
     <MESSAGE value="huy bobra" />
     <MESSAGE value="analnie terki bobra" />
-    <MESSAGE value="analnie terki bobra 2v" />
-    <option name="LAST_COMMIT_MESSAGE" value="analnie terki bobra 2v" />
+    <option name="LAST_COMMIT_MESSAGE" value="analnie terki bobra" />
   </component>
 </project>

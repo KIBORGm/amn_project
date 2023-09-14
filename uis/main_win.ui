@@ -53,9 +53,6 @@
      <layout class="QVBoxLayout" name="verticalLayout">
       <item alignment="Qt::AlignHCenter|Qt::AlignTop">
        <widget class="QFrame" name="frame">
-        <property name="styleSheet">
-         <string notr="true">border: None;</string>
-        </property>
         <property name="frameShape">
          <enum>QFrame::StyledPanel</enum>
         </property>
@@ -69,7 +66,7 @@
             <string/>
            </property>
            <property name="pixmap">
-            <pixmap>../icons/main_ico.png</pixmap>
+            <pixmap>icons/main_ico.png</pixmap>
            </property>
            <property name="margin">
             <number>0</number>
@@ -114,14 +111,13 @@ background-color: qlineargradient(spread:pad, x1:0, y1:0, x2:1, y2:1, stop:0 rgb
 #frame_btns{
 	padding-left: 30;
 	padding-right: 30;
-	border: None;
 }</string>
         </property>
         <property name="frameShape">
          <enum>QFrame::StyledPanel</enum>
         </property>
         <property name="frameShadow">
-         <enum>QFrame::Plain</enum>
+         <enum>QFrame::Raised</enum>
         </property>
         <layout class="QVBoxLayout" name="verticalLayout_2">
          <property name="spacing">
@@ -173,9 +169,6 @@ background-color: qlineargradient(spread:pad, x1:0, y1:0, x2:1, y2:1, stop:0 rgb
       </item>
       <item>
        <widget class="QFrame" name="frame_3">
-        <property name="styleSheet">
-         <string notr="true">border: None;</string>
-        </property>
         <property name="frameShape">
          <enum>QFrame::StyledPanel</enum>
         </property>
