@@ -23,6 +23,7 @@ def get_user_by_login(login):  # Получает данные пользова�
         "ab_me": ab_me
     }
 
+
 def delete_user_by_login(login):  # Удаляет данные из users по логину
     db_url = "https://amn-project-b3b8c-default-rtdb.europe-west1.firebasedatabase.app/users/"
     requests.delete(f"{db_url}/{login}.json").json()
@@ -49,3 +50,8 @@ def check_login(login: object) -> object:  # Проверяет наличие �
     db_url = "https://amn-project-b3b8c-default-rtdb.europe-west1.firebasedatabase.app/users"
     res = requests.get(f"{db_url}/{login}.json").json()
     return False if res == None else True
+
+def edit_user_by_login(username, login, pwd, hobby, about_me): #Редактирует пользователя по его логину
+    db_url = f"https://amn-project-b3b8c-default-rtdb.europe-west1.firebasedatabase.app/users/{login}"
+    json_data = {"pwd": pwd, "username": username, "hobby": hobby, "about_me": about_me}
+    requests.patch(url=f"{db_url}/.json", json=json_data)
