@@ -129,6 +129,9 @@ class win_main(main_win.Ui_Form, QtWidgets.QWidget):
 				hobby=self.user["hobby"],
 				about_me=self.user["ab_me"]
 			)
+			msg = QtWidgets.QMessageBox()
+			msg.setText("Изменения успешно внесены!")
+			msg.exec_()
 
 	def show_hello_page(self):
 		with open("data/entered.txt", "w") as f:
