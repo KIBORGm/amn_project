@@ -109,7 +109,6 @@ class win_main(main_win.Ui_Form, QtWidgets.QWidget):
 		self.pushButton_2.clicked.connect(self.edit_profile)
 		self.comboBox.currentIndexChanged.connect(self.show_hello_page)
 
-
 	def edit_profile(self):
 		if self.le_pwd.text() != self.le_r_pwd.text():
 			msg = QtWidgets.QMessageBox()

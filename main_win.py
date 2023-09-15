@@ -29,7 +29,7 @@ class Ui_Form(object):
 "    border: None;\n"
 "    background-color: qlineargradient(spread:pad, x1:0, y1:0, x2:0.869, y2:0.403818, stop:0 rgba(46, 183, 169, 255), stop:1 rgba(255, 146, 255, 255));\n"
 "}")
-        self.frame_menu.setFrameShape(QtWidgets.QFrame.StyledPanel)
+        self.frame_menu.setFrameShape(QtWidgets.QFrame.NoFrame)
         self.frame_menu.setFrameShadow(QtWidgets.QFrame.Raised)
         self.frame_menu.setLineWidth(0)
         self.frame_menu.setObjectName("frame_menu")
@@ -37,7 +37,7 @@ class Ui_Form(object):
         self.verticalLayout.setObjectName("verticalLayout")
         self.frame = QtWidgets.QFrame(self.frame_menu)
         self.frame.setStyleSheet("border: None;")
-        self.frame.setFrameShape(QtWidgets.QFrame.StyledPanel)
+        self.frame.setFrameShape(QtWidgets.QFrame.NoFrame)
         self.frame.setFrameShadow(QtWidgets.QFrame.Raised)
         self.frame.setObjectName("frame")
         self.horizontalLayout_2 = QtWidgets.QHBoxLayout(self.frame)
@@ -78,7 +78,7 @@ class Ui_Form(object):
 "    padding-right: 30;\n"
 "    border: None;\n"
 "}")
-        self.frame_btns.setFrameShape(QtWidgets.QFrame.StyledPanel)
+        self.frame_btns.setFrameShape(QtWidgets.QFrame.NoFrame)
         self.frame_btns.setFrameShadow(QtWidgets.QFrame.Plain)
         self.frame_btns.setObjectName("frame_btns")
         self.verticalLayout_2 = QtWidgets.QVBoxLayout(self.frame_btns)
@@ -104,7 +104,7 @@ class Ui_Form(object):
         self.verticalLayout.addWidget(self.frame_btns, 0, QtCore.Qt.AlignVCenter)
         self.frame_3 = QtWidgets.QFrame(self.frame_menu)
         self.frame_3.setStyleSheet("border: None;")
-        self.frame_3.setFrameShape(QtWidgets.QFrame.StyledPanel)
+        self.frame_3.setFrameShape(QtWidgets.QFrame.NoFrame)
         self.frame_3.setFrameShadow(QtWidgets.QFrame.Raised)
         self.frame_3.setObjectName("frame_3")
         self.verticalLayout.addWidget(self.frame_3)
@@ -145,7 +145,7 @@ class Ui_Form(object):
 "background-color: rgb(81, 81, 81);\n"
 "\n"
 "")
-        self.frame_top_profile.setFrameShape(QtWidgets.QFrame.StyledPanel)
+        self.frame_top_profile.setFrameShape(QtWidgets.QFrame.NoFrame)
         self.frame_top_profile.setFrameShadow(QtWidgets.QFrame.Raised)
         self.frame_top_profile.setObjectName("frame_top_profile")
         self.verticalLayout_9 = QtWidgets.QVBoxLayout(self.frame_top_profile)
@@ -158,14 +158,18 @@ class Ui_Form(object):
         self.verticalLayout_4.addWidget(self.frame_top_profile)
         self.frame_4 = QtWidgets.QFrame(self.pg_profile)
         self.frame_4.setStyleSheet("")
-        self.frame_4.setFrameShape(QtWidgets.QFrame.StyledPanel)
+        self.frame_4.setFrameShape(QtWidgets.QFrame.NoFrame)
         self.frame_4.setFrameShadow(QtWidgets.QFrame.Raised)
         self.frame_4.setObjectName("frame_4")
         self.horizontalLayout_4 = QtWidgets.QHBoxLayout(self.frame_4)
         self.horizontalLayout_4.setObjectName("horizontalLayout_4")
         self.frame_6 = QtWidgets.QFrame(self.frame_4)
-        self.frame_6.setFrameShape(QtWidgets.QFrame.StyledPanel)
+        self.frame_6.setStyleSheet("#frame_6{\n"
+"    border: None;\n"
+"}")
+        self.frame_6.setFrameShape(QtWidgets.QFrame.NoFrame)
         self.frame_6.setFrameShadow(QtWidgets.QFrame.Raised)
+        self.frame_6.setLineWidth(0)
         self.frame_6.setObjectName("frame_6")
         self.verticalLayout_18 = QtWidgets.QVBoxLayout(self.frame_6)
         self.verticalLayout_18.setObjectName("verticalLayout_18")
@@ -326,7 +330,7 @@ class Ui_Form(object):
 "color:rgb(227, 227, 227) ;\n"
 "background-color: qlineargradient(spread:pad, x1:0, y1:0, x2:1, y2:1, stop:0 rgba(14, 0, 255, 255), stop:1 rgba(0, 255, 104, 255));\n"
 "}")
-        self.frame_5.setFrameShape(QtWidgets.QFrame.StyledPanel)
+        self.frame_5.setFrameShape(QtWidgets.QFrame.NoFrame)
         self.frame_5.setFrameShadow(QtWidgets.QFrame.Raised)
         self.frame_5.setObjectName("frame_5")
         self.horizontalLayout_6 = QtWidgets.QHBoxLayout(self.frame_5)
@@ -366,7 +370,7 @@ class Ui_Form(object):
         self.horizontalLayout_6.setStretch(4, 3)
         self.verticalLayout_5.addWidget(self.frame_5)
         self.frame_top_groups = QtWidgets.QFrame(self.pg_groups)
-        self.frame_top_groups.setFrameShape(QtWidgets.QFrame.StyledPanel)
+        self.frame_top_groups.setFrameShape(QtWidgets.QFrame.NoFrame)
         self.frame_top_groups.setFrameShadow(QtWidgets.QFrame.Raised)
         self.frame_top_groups.setObjectName("frame_top_groups")
         self.layout_groups = QtWidgets.QVBoxLayout(self.frame_top_groups)
@@ -386,7 +390,7 @@ class Ui_Form(object):
 "background-color: rgb(81, 81, 81);\n"
 "\n"
 "")
-        self.frame_7.setFrameShape(QtWidgets.QFrame.StyledPanel)
+        self.frame_7.setFrameShape(QtWidgets.QFrame.NoFrame)
         self.frame_7.setFrameShadow(QtWidgets.QFrame.Raised)
         self.frame_7.setObjectName("frame_7")
         self.verticalLayout_13 = QtWidgets.QVBoxLayout(self.frame_7)
@@ -398,7 +402,7 @@ class Ui_Form(object):
         self.verticalLayout_13.addWidget(self.label_6, 0, QtCore.Qt.AlignHCenter)
         self.verticalLayout_6.addWidget(self.frame_7)
         self.frame_top_anon = QtWidgets.QFrame(self.pg_anon)
-        self.frame_top_anon.setFrameShape(QtWidgets.QFrame.StyledPanel)
+        self.frame_top_anon.setFrameShape(QtWidgets.QFrame.NoFrame)
         self.frame_top_anon.setFrameShadow(QtWidgets.QFrame.Raised)
         self.frame_top_anon.setObjectName("frame_top_anon")
         self.verticalLayout_14 = QtWidgets.QVBoxLayout(self.frame_top_anon)
@@ -422,7 +426,7 @@ class Ui_Form(object):
 "background-color: rgb(81, 81, 81);\n"
 "\n"
 "")
-        self.frame_top_cons.setFrameShape(QtWidgets.QFrame.StyledPanel)
+        self.frame_top_cons.setFrameShape(QtWidgets.QFrame.NoFrame)
         self.frame_top_cons.setFrameShadow(QtWidgets.QFrame.Raised)
         self.frame_top_cons.setObjectName("frame_top_cons")
         self.verticalLayout_11 = QtWidgets.QVBoxLayout(self.frame_top_cons)
@@ -434,7 +438,7 @@ class Ui_Form(object):
         self.verticalLayout_11.addWidget(self.label_7, 0, QtCore.Qt.AlignHCenter)
         self.verticalLayout_7.addWidget(self.frame_top_cons)
         self.frame_10 = QtWidgets.QFrame(self.pg_cons)
-        self.frame_10.setFrameShape(QtWidgets.QFrame.StyledPanel)
+        self.frame_10.setFrameShape(QtWidgets.QFrame.NoFrame)
         self.frame_10.setFrameShadow(QtWidgets.QFrame.Raised)
         self.frame_10.setObjectName("frame_10")
         self.verticalLayout_15 = QtWidgets.QVBoxLayout(self.frame_10)
@@ -458,7 +462,7 @@ class Ui_Form(object):
 "background-color: rgb(81, 81, 81);\n"
 "\n"
 "")
-        self.frame_top_opt.setFrameShape(QtWidgets.QFrame.StyledPanel)
+        self.frame_top_opt.setFrameShape(QtWidgets.QFrame.NoFrame)
         self.frame_top_opt.setFrameShadow(QtWidgets.QFrame.Raised)
         self.frame_top_opt.setObjectName("frame_top_opt")
         self.verticalLayout_10 = QtWidgets.QVBoxLayout(self.frame_top_opt)
@@ -478,13 +482,13 @@ class Ui_Form(object):
         self.frame_12.setStyleSheet("Qlabel{\n"
 "    font: 24pt \"Gadugi\";\n"
 "}")
-        self.frame_12.setFrameShape(QtWidgets.QFrame.StyledPanel)
+        self.frame_12.setFrameShape(QtWidgets.QFrame.NoFrame)
         self.frame_12.setFrameShadow(QtWidgets.QFrame.Raised)
         self.frame_12.setObjectName("frame_12")
         self.verticalLayout_16 = QtWidgets.QVBoxLayout(self.frame_12)
         self.verticalLayout_16.setObjectName("verticalLayout_16")
         self.frame_2 = QtWidgets.QFrame(self.frame_12)
-        self.frame_2.setFrameShape(QtWidgets.QFrame.StyledPanel)
+        self.frame_2.setFrameShape(QtWidgets.QFrame.NoFrame)
         self.frame_2.setFrameShadow(QtWidgets.QFrame.Raised)
         self.frame_2.setObjectName("frame_2")
         self.horizontalLayout_5 = QtWidgets.QHBoxLayout(self.frame_2)
@@ -532,7 +536,7 @@ class Ui_Form(object):
         self.horizontalLayout.setStretch(1, 5)
 
         self.retranslateUi(Form)
-        self.stackedWidget.setCurrentIndex(0)
+        self.stackedWidget.setCurrentIndex(5)
         QtCore.QMetaObject.connectSlotsByName(Form)
 
     def retranslateUi(self, Form):
