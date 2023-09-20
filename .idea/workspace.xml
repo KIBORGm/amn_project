@@ -4,15 +4,12 @@
     <option name="autoReloadType" value="SELECTIVE" />
   </component>
   <component name="ChangeListManager">
-    <list default="true" id="8cf6518c-4a11-455c-95f2-d42a80fee73a" name="Changes" comment="Social helper v1.0">
-      <change beforePath="$PROJECT_DIR$/.idea/amn_project.iml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/amn_project.iml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/.idea/misc.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/misc.xml" afterDir="false" />
+    <list default="true" id="8cf6518c-4a11-455c-95f2-d42a80fee73a" name="Changes" comment="Social helper v1.1, Translated to pyqt6">
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/enter.py" beforeDir="false" afterPath="$PROJECT_DIR$/enter.py" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/grp_widget.py" beforeDir="false" afterPath="$PROJECT_DIR$/grp_widget.py" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/icons/main_ico.png" beforeDir="false" afterPath="$PROJECT_DIR$/icons/main_ico.png" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/main.py" beforeDir="false" afterPath="$PROJECT_DIR$/main.py" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/main_win.py" beforeDir="false" afterPath="$PROJECT_DIR$/main_win.py" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/reg.py" beforeDir="false" afterPath="$PROJECT_DIR$/reg.py" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/uis/main_win.ui" beforeDir="false" afterPath="$PROJECT_DIR$/uis/main_win.ui" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -209,7 +206,15 @@
       <option name="project" value="LOCAL" />
       <updated>1694701673712</updated>
     </task>
-    <option name="localTasksCounter" value="10" />
+    <task id="LOCAL-00010" summary="Social helper v1.1, Translated to pyqt6">
+      <option name="closed" value="true" />
+      <created>1695211707457</created>
+      <option name="number" value="00010" />
+      <option name="presentableId" value="LOCAL-00010" />
+      <option name="project" value="LOCAL" />
+      <updated>1695211707457</updated>
+    </task>
+    <option name="localTasksCounter" value="11" />
     <servers />
   </component>
   <component name="Vcs.Log.Tabs.Properties">
@@ -244,6 +249,7 @@
     <MESSAGE value="To reset if smt went wrong" />
     <MESSAGE value="pyush" />
     <MESSAGE value="Social helper v1.0" />
-    <option name="LAST_COMMIT_MESSAGE" value="Social helper v1.0" />
+    <MESSAGE value="Social helper v1.1, Translated to pyqt6" />
+    <option name="LAST_COMMIT_MESSAGE" value="Social helper v1.1, Translated to pyqt6" />
   </component>
 </project>

@@ -12,11 +12,8 @@ from PyQt6 import QtCore, QtGui, QtWidgets
 class Ui_Form(object):
     def setupUi(self, Form):
         Form.setObjectName("Form")
-        Form.resize(752, 523)
-        Form.setStyleSheet("QLabel{\n"
-"    \n"
-"    font: 10pt \"Gadugi\";\n"
-"}\n"
+        Form.resize(1086, 530)
+        Form.setStyleSheet("font: 10pt \"Century Gothic\";\n"
 "")
         self.horizontalLayout = QtWidgets.QHBoxLayout(Form)
         self.horizontalLayout.setContentsMargins(0, 0, 0, 0)
@@ -41,18 +38,25 @@ class Ui_Form(object):
         self.horizontalLayout_2 = QtWidgets.QHBoxLayout(self.frame)
         self.horizontalLayout_2.setObjectName("horizontalLayout_2")
         self.label_2 = QtWidgets.QLabel(parent=self.frame)
+        self.label_2.setMinimumSize(QtCore.QSize(48, 48))
         self.label_2.setText("")
         self.label_2.setPixmap(QtGui.QPixmap(".\\uis\\../icons/main_ico.png"))
+        self.label_2.setScaledContents(False)
         self.label_2.setObjectName("label_2")
         self.horizontalLayout_2.addWidget(self.label_2)
         self.label = QtWidgets.QLabel(parent=self.frame)
-        self.label.setStyleSheet("font: 11pt \"Gadugi\";")
+        self.label.setStyleSheet("font: 75 italic 12pt \"Century Gothic\";")
         self.label.setWordWrap(True)
         self.label.setObjectName("label")
         self.horizontalLayout_2.addWidget(self.label)
         self.verticalLayout.addWidget(self.frame, 0, QtCore.Qt.AlignmentFlag.AlignHCenter|QtCore.Qt.AlignmentFlag.AlignTop)
         self.frame_btns = QtWidgets.QFrame(parent=self.frame_menu)
+        font = QtGui.QFont()
+        font.setFamily("Century Gothic")
+        font.setPointSize(10)
+        self.frame_btns.setFont(font)
         self.frame_btns.setStyleSheet("QPushButton{\n"
+"font: 75 9pt \"Century Gothic\";\n"
 "color: qlineargradient(spread:pad, x1:0, y1:0, x2:0.869, y2:0.403818, stop:0 rgba(46, 183, 169, 255), stop:1 rgba(255, 146, 255, 255));\n"
 "background-color:rgb(81, 81, 81);\n"
 "border-radius: 10;\n"
@@ -96,9 +100,9 @@ class Ui_Form(object):
         self.pb_cons = QtWidgets.QPushButton(parent=self.frame_btns)
         self.pb_cons.setObjectName("pb_cons")
         self.verticalLayout_2.addWidget(self.pb_cons)
-        self.pushButton = QtWidgets.QPushButton(parent=self.frame_btns)
-        self.pushButton.setObjectName("pushButton")
-        self.verticalLayout_2.addWidget(self.pushButton)
+        self.pb_options = QtWidgets.QPushButton(parent=self.frame_btns)
+        self.pb_options.setObjectName("pb_options")
+        self.verticalLayout_2.addWidget(self.pb_options)
         self.verticalLayout.addWidget(self.frame_btns, 0, QtCore.Qt.AlignmentFlag.AlignVCenter)
         self.frame_3 = QtWidgets.QFrame(parent=self.frame_menu)
         self.frame_3.setStyleSheet("border: None;")
@@ -128,7 +132,17 @@ class Ui_Form(object):
         self.horizontalLayout_3.setSpacing(0)
         self.horizontalLayout_3.setObjectName("horizontalLayout_3")
         self.label_3 = QtWidgets.QLabel(parent=self.pg_hello)
+        font = QtGui.QFont()
+        font.setFamily("Century Gothic")
+        font.setPointSize(12)
+        font.setBold(False)
+        font.setItalic(False)
+        font.setWeight(50)
+        self.label_3.setFont(font)
+        self.label_3.setStyleSheet("padding: 10px;\n"
+"font: 12pt \"Century Gothic\";")
         self.label_3.setAlignment(QtCore.Qt.AlignmentFlag.AlignCenter)
+        self.label_3.setWordWrap(True)
         self.label_3.setObjectName("label_3")
         self.horizontalLayout_3.addWidget(self.label_3)
         self.stackedWidget.addWidget(self.pg_hello)
@@ -139,7 +153,7 @@ class Ui_Form(object):
         self.verticalLayout_4.setSpacing(0)
         self.verticalLayout_4.setObjectName("verticalLayout_4")
         self.frame_top_profile = QtWidgets.QFrame(parent=self.pg_profile)
-        self.frame_top_profile.setStyleSheet("\n"
+        self.frame_top_profile.setStyleSheet("font: 15pt \"Century Gothic\";\n"
 "background-color: rgb(81, 81, 81);\n"
 "\n"
 "")
@@ -149,8 +163,15 @@ class Ui_Form(object):
         self.verticalLayout_9 = QtWidgets.QVBoxLayout(self.frame_top_profile)
         self.verticalLayout_9.setObjectName("verticalLayout_9")
         self.label_4 = QtWidgets.QLabel(parent=self.frame_top_profile)
+        font = QtGui.QFont()
+        font.setFamily("Century Gothic")
+        font.setPointSize(16)
+        font.setBold(False)
+        font.setItalic(False)
+        font.setWeight(50)
+        self.label_4.setFont(font)
         self.label_4.setStyleSheet("color: rgb(255, 255, 255);\n"
-"font: 15pt \"MS Sans Serif\";")
+"font: 16pt \"Century Gothic\";")
         self.label_4.setObjectName("label_4")
         self.verticalLayout_9.addWidget(self.label_4, 0, QtCore.Qt.AlignmentFlag.AlignHCenter)
         self.verticalLayout_4.addWidget(self.frame_top_profile)
@@ -178,7 +199,7 @@ class Ui_Form(object):
         self.verticalLayout_17.addWidget(self.label_11)
         self.label_17 = QtWidgets.QLabel(parent=self.frame_6)
         font = QtGui.QFont()
-        font.setFamily("Gadugi")
+        font.setFamily("Century Gothic")
         font.setPointSize(10)
         font.setBold(False)
         font.setItalic(False)
@@ -194,7 +215,7 @@ class Ui_Form(object):
         self.verticalLayout_17.addWidget(self.le_name)
         self.label_13 = QtWidgets.QLabel(parent=self.frame_6)
         font = QtGui.QFont()
-        font.setFamily("Gadugi")
+        font.setFamily("Century Gothic")
         font.setPointSize(10)
         font.setBold(False)
         font.setItalic(False)
@@ -210,7 +231,7 @@ class Ui_Form(object):
         self.verticalLayout_17.addWidget(self.le_pwd)
         self.label_15 = QtWidgets.QLabel(parent=self.frame_6)
         font = QtGui.QFont()
-        font.setFamily("Gadugi")
+        font.setFamily("Century Gothic")
         font.setPointSize(10)
         font.setBold(False)
         font.setItalic(False)
@@ -226,7 +247,7 @@ class Ui_Form(object):
         self.verticalLayout_17.addWidget(self.le_r_pwd)
         self.label_14 = QtWidgets.QLabel(parent=self.frame_6)
         font = QtGui.QFont()
-        font.setFamily("Gadugi")
+        font.setFamily("Century Gothic")
         font.setPointSize(10)
         font.setBold(False)
         font.setItalic(False)
@@ -270,8 +291,8 @@ class Ui_Form(object):
         self.pte_about.setObjectName("pte_about")
         self.verticalLayout_17.addWidget(self.pte_about)
         self.verticalLayout_18.addLayout(self.verticalLayout_17)
-        self.pushButton_2 = QtWidgets.QPushButton(parent=self.frame_6)
-        self.pushButton_2.setStyleSheet("QPushButton{\n"
+        self.pb_changes_submit = QtWidgets.QPushButton(parent=self.frame_6)
+        self.pb_changes_submit.setStyleSheet("QPushButton{\n"
 "color: qlineargradient(spread:pad, x1:0, y1:0, x2:0.869, y2:0.403818, stop:0 rgba(46, 183, 169, 255), stop:1 rgba(255, 146, 255, 255));\n"
 "background-color:rgb(81, 81, 81);\n"
 "border-radius: 10;\n"
@@ -289,8 +310,8 @@ class Ui_Form(object):
 "background-color: qlineargradient(spread:pad, x1:0, y1:0, x2:1, y2:1, stop:0 rgba(14, 0, 255, 255), stop:1 rgba(0, 255, 104, 255));\n"
 "\n"
 "}")
-        self.pushButton_2.setObjectName("pushButton_2")
-        self.verticalLayout_18.addWidget(self.pushButton_2)
+        self.pb_changes_submit.setObjectName("pb_changes_submit")
+        self.verticalLayout_18.addWidget(self.pb_changes_submit)
         self.horizontalLayout_4.addWidget(self.frame_6)
         self.horizontalLayout_4.setStretch(0, 1)
         self.verticalLayout_4.addWidget(self.frame_4)
@@ -339,7 +360,7 @@ class Ui_Form(object):
         icon = QtGui.QIcon()
         icon.addPixmap(QtGui.QPixmap(".\\uis\\../icons/group_add_FILL0_wght400_GRAD0_opsz24.png"), QtGui.QIcon.Mode.Normal, QtGui.QIcon.State.Off)
         self.pb_add_group.setIcon(icon)
-        self.pb_add_group.setIconSize(QtCore.QSize(24, 24))
+        self.pb_add_group.setIconSize(QtCore.QSize(32, 32))
         self.pb_add_group.setObjectName("pb_add_group")
         self.horizontalLayout_6.addWidget(self.pb_add_group)
         self.pb_del_group = QtWidgets.QPushButton(parent=self.frame_5)
@@ -350,14 +371,14 @@ class Ui_Form(object):
         icon1 = QtGui.QIcon()
         icon1.addPixmap(QtGui.QPixmap(".\\uis\\../icons/group_off_FILL0_wght400_GRAD0_opsz24 (1).png"), QtGui.QIcon.Mode.Normal, QtGui.QIcon.State.Off)
         self.pb_del_group.setIcon(icon1)
-        self.pb_del_group.setIconSize(QtCore.QSize(24, 24))
+        self.pb_del_group.setIconSize(QtCore.QSize(32, 32))
         self.pb_del_group.setObjectName("pb_del_group")
         self.horizontalLayout_6.addWidget(self.pb_del_group, 0, QtCore.Qt.AlignmentFlag.AlignHCenter|QtCore.Qt.AlignmentFlag.AlignVCenter)
         spacerItem = QtWidgets.QSpacerItem(40, 20, QtWidgets.QSizePolicy.Policy.Expanding, QtWidgets.QSizePolicy.Policy.Minimum)
         self.horizontalLayout_6.addItem(spacerItem)
         self.label_5 = QtWidgets.QLabel(parent=self.frame_5)
         self.label_5.setStyleSheet("color: rgb(255, 255, 255);\n"
-"font: 15pt \"MS Sans Serif\";")
+"font: 16pt \"Century Gothic\";")
         self.label_5.setObjectName("label_5")
         self.horizontalLayout_6.addWidget(self.label_5, 0, QtCore.Qt.AlignmentFlag.AlignHCenter)
         spacerItem1 = QtWidgets.QSpacerItem(40, 20, QtWidgets.QSizePolicy.Policy.Expanding, QtWidgets.QSizePolicy.Policy.Minimum)
@@ -395,7 +416,7 @@ class Ui_Form(object):
         self.verticalLayout_13.setObjectName("verticalLayout_13")
         self.label_6 = QtWidgets.QLabel(parent=self.frame_7)
         self.label_6.setStyleSheet("color: rgb(255, 255, 255);\n"
-"font: 15pt \"MS Sans Serif\";")
+"font: 16pt \"Century Gothic\";")
         self.label_6.setObjectName("label_6")
         self.verticalLayout_13.addWidget(self.label_6, 0, QtCore.Qt.AlignmentFlag.AlignHCenter)
         self.verticalLayout_6.addWidget(self.frame_7)
@@ -431,7 +452,7 @@ class Ui_Form(object):
         self.verticalLayout_11.setObjectName("verticalLayout_11")
         self.label_7 = QtWidgets.QLabel(parent=self.frame_top_cons)
         self.label_7.setStyleSheet("color: rgb(255, 255, 255);\n"
-"font: 15pt \"MS Sans Serif\";")
+"font: 16pt \"Century Gothic\";")
         self.label_7.setObjectName("label_7")
         self.verticalLayout_11.addWidget(self.label_7, 0, QtCore.Qt.AlignmentFlag.AlignHCenter)
         self.verticalLayout_7.addWidget(self.frame_top_cons)
@@ -467,15 +488,18 @@ class Ui_Form(object):
         self.verticalLayout_10.setObjectName("verticalLayout_10")
         self.label_8 = QtWidgets.QLabel(parent=self.frame_top_opt)
         self.label_8.setStyleSheet("color: rgb(255, 255, 255);\n"
-"font: 15pt \"MS Sans Serif\";")
+"font: 16pt \"Century Gothic\";")
         self.label_8.setAlignment(QtCore.Qt.AlignmentFlag.AlignCenter)
         self.label_8.setObjectName("label_8")
         self.verticalLayout_10.addWidget(self.label_8)
         self.verticalLayout_8.addWidget(self.frame_top_opt)
         self.frame_12 = QtWidgets.QFrame(parent=self.pg_options)
         font = QtGui.QFont()
-        font.setFamily("Futura Bk BT")
+        font.setFamily("Century Gothic")
         font.setPointSize(10)
+        font.setBold(False)
+        font.setItalic(False)
+        font.setWeight(50)
         self.frame_12.setFont(font)
         self.frame_12.setStyleSheet("Qlabel{\n"
 "    font: 24pt \"Gadugi\";\n"
@@ -493,7 +517,7 @@ class Ui_Form(object):
         self.horizontalLayout_5.setObjectName("horizontalLayout_5")
         self.label_12 = QtWidgets.QLabel(parent=self.frame_2)
         font = QtGui.QFont()
-        font.setFamily("Gadugi")
+        font.setFamily("Century Gothic")
         font.setPointSize(10)
         font.setBold(False)
         font.setItalic(False)
@@ -502,8 +526,8 @@ class Ui_Form(object):
         self.label_12.setStyleSheet("")
         self.label_12.setObjectName("label_12")
         self.horizontalLayout_5.addWidget(self.label_12)
-        self.comboBox = QtWidgets.QComboBox(parent=self.frame_2)
-        self.comboBox.setStyleSheet("QComboBox{\n"
+        self.cb_start_page = QtWidgets.QComboBox(parent=self.frame_2)
+        self.cb_start_page.setStyleSheet("QComboBox{\n"
 "border-radius: 5;\n"
 "border: 1px solid qlineargradient(spread:pad, x1:0, y1:0, x2:0.869, y2:0.403818, stop:0 rgba(46, 183, 169, 255), stop:1 rgba(255, 146, 255, 255));\n"
 "padding: 2;\n"
@@ -513,14 +537,14 @@ class Ui_Form(object):
 "width: 0px;\n"
 "                    \n"
 "                     }")
-        self.comboBox.setObjectName("comboBox")
-        self.comboBox.addItem("")
-        self.comboBox.addItem("")
-        self.comboBox.addItem("")
-        self.comboBox.addItem("")
-        self.comboBox.addItem("")
-        self.comboBox.addItem("")
-        self.horizontalLayout_5.addWidget(self.comboBox)
+        self.cb_start_page.setObjectName("cb_start_page")
+        self.cb_start_page.addItem("")
+        self.cb_start_page.addItem("")
+        self.cb_start_page.addItem("")
+        self.cb_start_page.addItem("")
+        self.cb_start_page.addItem("")
+        self.cb_start_page.addItem("")
+        self.horizontalLayout_5.addWidget(self.cb_start_page)
         self.verticalLayout_16.addWidget(self.frame_2)
         spacerItem2 = QtWidgets.QSpacerItem(20, 40, QtWidgets.QSizePolicy.Policy.Minimum, QtWidgets.QSizePolicy.Policy.Expanding)
         self.verticalLayout_16.addItem(spacerItem2)
@@ -534,7 +558,7 @@ class Ui_Form(object):
         self.horizontalLayout.setStretch(1, 5)
 
         self.retranslateUi(Form)
-        self.stackedWidget.setCurrentIndex(5)
+        self.stackedWidget.setCurrentIndex(0)
         QtCore.QMetaObject.connectSlotsByName(Form)
 
     def retranslateUi(self, Form):
@@ -545,7 +569,7 @@ class Ui_Form(object):
         self.pb_groups.setText(_translate("Form", "Группы"))
         self.pb_anon.setText(_translate("Form", "Анонимные чаты"))
         self.pb_cons.setText(_translate("Form", "Проф. консультации"))
-        self.pushButton.setText(_translate("Form", "Настройки"))
+        self.pb_options.setText(_translate("Form", "Настройки"))
         self.label_3.setText(_translate("Form", "Добро пожаловать!\n"
 "Вас приветствует приложение Социальный Компаньон.\n"
 " С помощью этого приложения вы сможете:\n"
@@ -570,7 +594,7 @@ class Ui_Form(object):
         self.cb_hobby.setItemText(8, _translate("Form", "Чтение"))
         self.cb_hobby.setItemText(9, _translate("Form", "Другое"))
         self.label_16.setText(_translate("Form", "О себе:"))
-        self.pushButton_2.setText(_translate("Form", "Подтвердить изменения"))
+        self.pb_changes_submit.setText(_translate("Form", "Подтвердить изменения"))
         self.label_5.setText(_translate("Form", "ГРУППЫ"))
         self.label_6.setText(_translate("Form", "АНОНИМНЫЕ ЧАТЫ"))
         self.label_9.setText(_translate("Form", "В Разработке"))
@@ -578,12 +602,12 @@ class Ui_Form(object):
         self.label_10.setText(_translate("Form", "В Разработке"))
         self.label_8.setText(_translate("Form", "НАСТРОЙКИ"))
         self.label_12.setText(_translate("Form", "Страница по умолчанию при открытии приложения:"))
-        self.comboBox.setItemText(0, _translate("Form", "Приветственное сообщение"))
-        self.comboBox.setItemText(1, _translate("Form", "Профиль"))
-        self.comboBox.setItemText(2, _translate("Form", "Группы"))
-        self.comboBox.setItemText(3, _translate("Form", "Анонимные чаты"))
-        self.comboBox.setItemText(4, _translate("Form", "Проф. Консультации"))
-        self.comboBox.setItemText(5, _translate("Form", "Настройки"))
+        self.cb_start_page.setItemText(0, _translate("Form", "Приветственное сообщение"))
+        self.cb_start_page.setItemText(1, _translate("Form", "Профиль"))
+        self.cb_start_page.setItemText(2, _translate("Form", "Группы"))
+        self.cb_start_page.setItemText(3, _translate("Form", "Анонимные чаты"))
+        self.cb_start_page.setItemText(4, _translate("Form", "Проф. Консультации"))
+        self.cb_start_page.setItemText(5, _translate("Form", "Настройки"))
 
 
 if __name__ == "__main__":

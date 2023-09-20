@@ -44,19 +44,22 @@ class win_reg(reg.Ui_Form, QtWidgets.QWidget):
 	def __init__(self):
 		super().__init__()
 		self.setupUi(self)
-		self.pushButton.clicked.connect(self.back_to_enter)
+		self.pb_next.clicked.connect(self.back_to_enter)
 		self.pb_next.clicked.connect(self.registration)
 
 	def registration(self):
 
-		print("check")
 		if connect.check_login(self.le_login.text()) == True:
 			msg = QtWidgets.QMessageBox()
-			msg.setText("Такой логин уже занят")
+			msg.setText("Такой логин уже занят.")
 			msg.exec()
 		elif self.le_pwd.text() != self.le_r_pwd.text():
 			msg = QtWidgets.QMessageBox()
-			msg.setText("Пароли не совпадают")
+			msg.setText("Пароли не совпадают.")
+			msg.exec()
+		elif len(self.le_pwd.text()) < 8:
+			msg = QtWidgets.QMessageBox()
+			msg.setText("Пароль слишком короткий, пожалуйста придумайте более сложный пароль.")
 			msg.exec()
 		else:
 			username = self.le_name.text()
@@ -101,14 +104,14 @@ class win_main(main_win.Ui_Form, QtWidgets.QWidget):
 		self.pb_anon.clicked.connect(lambda: self.stackedWidget.setCurrentWidget(self.pg_anon))
 		self.pb_cons.clicked.connect(lambda: self.stackedWidget.setCurrentWidget(self.pg_cons))
 		self.pb_groups.clicked.connect(lambda: self.stackedWidget.setCurrentWidget(self.pg_groups))
-		self.pushButton.clicked.connect(lambda: self.stackedWidget.setCurrentWidget(self.pg_options))
+		self.pb_options.clicked.connect(lambda: self.stackedWidget.setCurrentWidget(self.pg_options))
 
 		self.label_11.setText(f"Редактирование профиля {user['login']}:")
 		self.le_name.setText(user["username"])
 		self.cb_hobby.setCurrentIndex(user["hobby"])
 		self.pte_about.setPlainText(user["ab_me"])
 
-		self.pushButton_2.clicked.connect(self.edit_profile)
+		self.pb_changes_submit.clicked.connect(self.edit_profile)
 		self.comboBox.currentIndexChanged.connect(self.show_hello_page)
 
 	def edit_profile(self):
