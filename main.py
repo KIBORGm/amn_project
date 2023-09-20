@@ -5,7 +5,7 @@ import enter
 import grp_widget
 import main_win
 import reg
-from PyQt5 import QtCore, QtGui, QtWidgets
+from PyQt6 import QtCore, QtGui, QtWidgets
 
 #login window class
 class win_enter(enter.Ui_Form, QtWidgets.QWidget):
@@ -16,11 +16,12 @@ class win_enter(enter.Ui_Form, QtWidgets.QWidget):
 		self.pb_enter.clicked.connect(self.login)
 
 	def login(self):
+
 		check = connect.check_login(self.le_login.text())
 		if check == False:
 			msg = QtWidgets.QMessageBox()
 			msg.setText("логин или пароль были введены неправильно, проверьте валидность введных данных и повторите попытку")
-			msg.exec_()
+			msg.exec()
 
 		else:
 			user = connect.get_user_by_login(self.le_login.text())
@@ -31,7 +32,7 @@ class win_enter(enter.Ui_Form, QtWidgets.QWidget):
 			else:
 				msg = QtWidgets.QMessageBox()
 				msg.setText("логин или пароль были введены неправильно, проверьте валидность введных данных и повторите попытку")
-				msg.exec_()
+				msg.exec()
 	def show_reg_win(self):
 		self.reg_win = win_reg()
 		self.reg_win.show()
@@ -47,15 +48,16 @@ class win_reg(reg.Ui_Form, QtWidgets.QWidget):
 		self.pb_next.clicked.connect(self.registration)
 
 	def registration(self):
+
 		print("check")
 		if connect.check_login(self.le_login.text()) == True:
 			msg = QtWidgets.QMessageBox()
 			msg.setText("Такой логин уже занят")
-			msg.exec_()
+			msg.exec()
 		elif self.le_pwd.text() != self.le_r_pwd.text():
 			msg = QtWidgets.QMessageBox()
 			msg.setText("Пароли не совпадают")
-			msg.exec_()
+			msg.exec()
 		else:
 			username = self.le_name.text()
 			login    = self.le_login.text()
@@ -78,7 +80,7 @@ class win_reg(reg.Ui_Form, QtWidgets.QWidget):
 
 			msg = QtWidgets.QMessageBox()
 			msg.setText("Учетная запись успешно создана, теперь вы можете войти")
-			msg.exec_()
+			msg.exec()
 
 	def back_to_enter(self):
 		self.enter_win = win_enter()
@@ -113,7 +115,7 @@ class win_main(main_win.Ui_Form, QtWidgets.QWidget):
 		if self.le_pwd.text() != self.le_r_pwd.text():
 			msg = QtWidgets.QMessageBox()
 			msg.setText("Пароли не совпадают")
-			msg.exec_()
+			msg.exec()
 			return
 		else:
 			self.user["username"] = self.le_name.text() if self.le_name.text() != self.user["username"] else self.user["username"]
@@ -130,7 +132,7 @@ class win_main(main_win.Ui_Form, QtWidgets.QWidget):
 			)
 			msg = QtWidgets.QMessageBox()
 			msg.setText("Изменения успешно внесены!")
-			msg.exec_()
+			msg.exec()
 
 	def show_hello_page(self):
 		with open("data/entered.txt", "w") as f:
@@ -141,4 +143,4 @@ if __name__ == "__main__":
     app = QtWidgets.QApplication(sys.argv)
     ui = win_enter()
     ui.show()
-    sys.exit(app.exec_())
+    sys.exit(app.exec())
