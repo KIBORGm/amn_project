@@ -16,8 +16,14 @@ class Ui_Form(object):
         Form.setStyleSheet("#Form{\n"
 "background-color: qlineargradient(spread:pad, x1:0, y1:0, x2:0.869, y2:0.403818, stop:0 rgba(46, 183, 169, 255), stop:1 rgba(255, 146, 255, 255));\n"
 "}\n"
+"QLabel{\n"
+"    \n"
+"    font: 10pt \"Century Gothic\";\n"
+"}\n"
 "\n"
-"")
+"QPushButton{\n"
+"        font: 10pt \"Century Gothic\";\n"
+"}")
         self.gridLayout = QtWidgets.QGridLayout(Form)
         self.gridLayout.setObjectName("gridLayout")
         spacerItem = QtWidgets.QSpacerItem(352, 20, QtWidgets.QSizePolicy.Policy.Expanding, QtWidgets.QSizePolicy.Policy.Minimum)
@@ -41,11 +47,13 @@ class Ui_Form(object):
         self.verticalLayout_3.setObjectName("verticalLayout_3")
         self.label = QtWidgets.QLabel(parent=self.frame_main)
         font = QtGui.QFont()
-        font.setFamily("Gadugi")
+        font.setFamily("Century Gothic")
         font.setPointSize(16)
-        font.setBold(True)
-        font.setWeight(75)
+        font.setBold(False)
+        font.setItalic(False)
+        font.setWeight(50)
         self.label.setFont(font)
+        self.label.setStyleSheet("    font: 16pt \"Century Gothic\";")
         self.label.setAlignment(QtCore.Qt.AlignmentFlag.AlignCenter)
         self.label.setObjectName("label")
         self.verticalLayout_3.addWidget(self.label)
@@ -124,7 +132,7 @@ class Ui_Form(object):
 
     def retranslateUi(self, Form):
         _translate = QtCore.QCoreApplication.translate
-        Form.setWindowTitle(_translate("Form", "Form"))
+        Form.setWindowTitle(_translate("Form", "Социальный компаньон - вход"))
         self.label.setText(_translate("Form", "ВХОД"))
         self.pushButton.setText(_translate("Form", "Забыли пароль?"))
         self.label_2.setText(_translate("Form", "Логин:"))

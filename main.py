@@ -7,6 +7,13 @@ import main_win
 import reg
 from PyQt6 import QtCore, QtGui, QtWidgets
 
+def show_base_msg(text, title="Социальный компаньон"):
+	msg = QtWidgets.QMessageBox()
+	msg.setText(text)
+	msg.setWindowTitle(title)
+	msg.exec()
+
+
 #login window class
 class win_enter(enter.Ui_Form, QtWidgets.QWidget):
 	def __init__(self):
@@ -15,24 +22,30 @@ class win_enter(enter.Ui_Form, QtWidgets.QWidget):
 		self.pb_reg.clicked.connect(self.show_reg_win)
 		self.pb_enter.clicked.connect(self.login)
 
+
+
 	def login(self):
+		if len(self.le_login.text()) != 0 and len(self.le_password.text()) != 0:
+			check = connect.check_login(self.le_login.text())
 
-		check = connect.check_login(self.le_login.text())
-		if check == False:
-			msg = QtWidgets.QMessageBox()
-			msg.setText("логин или пароль были введены неправильно, проверьте валидность введных данных и повторите попытку")
-			msg.exec()
-
-		else:
-			user = connect.get_user_by_login(self.le_login.text())
-			if user["login"] == self.le_login.text() and user["pwd"] == self.le_password.text():
-				self.master_win = win_main(user=user)
-				self.master_win.show()
-				self.close()
-			else:
+			if check == False:
 				msg = QtWidgets.QMessageBox()
-				msg.setText("логин или пароль были введены неправильно, проверьте валидность введных данных и повторите попытку")
+				msg.setText(
+					"логин или пароль были введены неправильно, проверьте валидность введных данных и повторите попытку")
 				msg.exec()
+
+			else:
+				user = connect.get_user_by_login(self.le_login.text())
+				if user["login"] == self.le_login.text() and user["pwd"] == self.le_password.text():
+					self.master_win = win_main(user=user)
+					self.master_win.show()
+					self.close()
+				else:
+					show_base_msg(
+						text="логин или пароль были введены неправильно, проверьте валидность введных данных и повторите попытку")
+		else:
+			show_base_msg(text="Пожалуйста введите логин и пароль")
+
 	def show_reg_win(self):
 		self.reg_win = win_reg()
 		self.reg_win.show()
@@ -44,23 +57,17 @@ class win_reg(reg.Ui_Form, QtWidgets.QWidget):
 	def __init__(self):
 		super().__init__()
 		self.setupUi(self)
-		self.pb_next.clicked.connect(self.back_to_enter)
+		self.pb_back_to_enter.clicked.connect(self.back_to_enter)
 		self.pb_next.clicked.connect(self.registration)
 
 	def registration(self):
 
 		if connect.check_login(self.le_login.text()) == True:
-			msg = QtWidgets.QMessageBox()
-			msg.setText("Такой логин уже занят.")
-			msg.exec()
+			show_base_msg(text="Такой логин уже занят. Попробуйте другой")
 		elif self.le_pwd.text() != self.le_r_pwd.text():
-			msg = QtWidgets.QMessageBox()
-			msg.setText("Пароли не совпадают.")
-			msg.exec()
+			show_base_msg(text="Введенные пароли не совпадают.")
 		elif len(self.le_pwd.text()) < 8:
-			msg = QtWidgets.QMessageBox()
-			msg.setText("Пароль слишком короткий, пожалуйста придумайте более сложный пароль.")
-			msg.exec()
+			show_base_msg(text="Пароль слишком короткий, пожалуйста придумайте более сложный пароль.")
 		else:
 			username = self.le_name.text()
 			login    = self.le_login.text()
@@ -81,9 +88,7 @@ class win_reg(reg.Ui_Form, QtWidgets.QWidget):
 				about_me=about_me
 			)
 
-			msg = QtWidgets.QMessageBox()
-			msg.setText("Учетная запись успешно создана, теперь вы можете войти")
-			msg.exec()
+			show_base_msg(text="Учетная запись успешно создана, теперь вы можете войти")
 
 	def back_to_enter(self):
 		self.enter_win = win_enter()
@@ -106,19 +111,19 @@ class win_main(main_win.Ui_Form, QtWidgets.QWidget):
 		self.pb_groups.clicked.connect(lambda: self.stackedWidget.setCurrentWidget(self.pg_groups))
 		self.pb_options.clicked.connect(lambda: self.stackedWidget.setCurrentWidget(self.pg_options))
 
-		self.label_11.setText(f"Редактирование профиля {user['login']}:")
+		self.label_11.setText(f"Редактирование профиля \"{user['login']}\":")
 		self.le_name.setText(user["username"])
 		self.cb_hobby.setCurrentIndex(user["hobby"])
 		self.pte_about.setPlainText(user["ab_me"])
 
 		self.pb_changes_submit.clicked.connect(self.edit_profile)
-		self.comboBox.currentIndexChanged.connect(self.show_hello_page)
+		self.cb_hobby.currentIndexChanged.connect(self.show_hello_page)
 
 	def edit_profile(self):
-		if self.le_pwd.text() != self.le_r_pwd.text():
-			msg = QtWidgets.QMessageBox()
-			msg.setText("Пароли не совпадают")
-			msg.exec()
+		if len(self.le_pwd.text()) < 8:
+			show_base_msg(text="Пароль слишком короткий, пожалуйста придумайте более сложный пароль.")
+		elif self.le_pwd.text() != self.le_r_pwd.text():
+			show_base_msg(text="Пароли не совпадают")
 			return
 		else:
 			self.user["username"] = self.le_name.text() if self.le_name.text() != self.user["username"] else self.user["username"]
@@ -133,9 +138,7 @@ class win_main(main_win.Ui_Form, QtWidgets.QWidget):
 				hobby=self.user["hobby"],
 				about_me=self.user["ab_me"]
 			)
-			msg = QtWidgets.QMessageBox()
-			msg.setText("Изменения успешно внесены!")
-			msg.exec()
+			show_base_msg(text="Изменения были успешно внесены")
 
 	def show_hello_page(self):
 		with open("data/entered.txt", "w") as f:

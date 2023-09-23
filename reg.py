@@ -1,4 +1,4 @@
-# Form implementation generated from reading ui file '.\uis\reg.ui'
+# Form implementation generated from reading ui file 'reg.ui'
 #
 # Created by: PyQt6 UI code generator 6.5.2
 #
@@ -12,15 +12,19 @@ from PyQt6 import QtCore, QtGui, QtWidgets
 class Ui_Form(object):
     def setupUi(self, Form):
         Form.setObjectName("Form")
-        Form.resize(441, 575)
+        Form.resize(441, 629)
         Form.setStyleSheet("#Form{\n"
 "background-color: qlineargradient(spread:pad, x1:0, y1:0, x2:0.869, y2:0.403818, stop:0 rgba(46, 183, 169, 255), stop:1 rgba(255, 146, 255, 255));\n"
 "}\n"
 "QLabel{\n"
-"    \n"
-"    font: 10pt \"Gadugi\";\n"
+"    font: 10pt \"Century Gothic\";\n"
 "}\n"
-"")
+"QComboBox{\n"
+"font: 10pt \"Century Gothic\";\n"
+"}\n"
+"QPushButton{\n"
+"    font: 10pt \"Century Gothic\";\n"
+"}")
         self.gridLayout = QtWidgets.QGridLayout(Form)
         self.gridLayout.setContentsMargins(50, 50, 50, 50)
         self.gridLayout.setObjectName("gridLayout")
@@ -36,25 +40,25 @@ class Ui_Form(object):
         self.verticalLayout.setObjectName("verticalLayout")
         self.horizontalLayout = QtWidgets.QHBoxLayout()
         self.horizontalLayout.setObjectName("horizontalLayout")
-        self.pushButton = QtWidgets.QPushButton(parent=self.frame_main)
-        self.pushButton.setStyleSheet("")
-        self.pushButton.setText("")
+        self.pb_back_to_enter = QtWidgets.QPushButton(parent=self.frame_main)
+        self.pb_back_to_enter.setStyleSheet("")
+        self.pb_back_to_enter.setText("")
         icon = QtGui.QIcon()
-        icon.addPixmap(QtGui.QPixmap(".\\uis\\icons/arrow_back.png"), QtGui.QIcon.Mode.Normal, QtGui.QIcon.State.Off)
-        self.pushButton.setIcon(icon)
-        self.pushButton.setFlat(True)
-        self.pushButton.setObjectName("pushButton")
-        self.horizontalLayout.addWidget(self.pushButton)
+        icon.addPixmap(QtGui.QPixmap("icons/arrow_back.png"), QtGui.QIcon.Mode.Normal, QtGui.QIcon.State.Off)
+        self.pb_back_to_enter.setIcon(icon)
+        self.pb_back_to_enter.setFlat(True)
+        self.pb_back_to_enter.setObjectName("pb_back_to_enter")
+        self.horizontalLayout.addWidget(self.pb_back_to_enter)
         self.label = QtWidgets.QLabel(parent=self.frame_main)
         self.label.setEnabled(True)
         font = QtGui.QFont()
-        font.setFamily("Gadugi")
+        font.setFamily("Century Gothic")
         font.setPointSize(16)
         font.setBold(False)
         font.setItalic(False)
-        font.setWeight(9)
+        font.setWeight(50)
         self.label.setFont(font)
-        self.label.setStyleSheet("font: 75 16pt \"Gadugi\";")
+        self.label.setStyleSheet("font: 16pt \"Century Gothic\";")
         self.label.setAlignment(QtCore.Qt.AlignmentFlag.AlignCenter)
         self.label.setObjectName("label")
         self.horizontalLayout.addWidget(self.label, 0, QtCore.Qt.AlignmentFlag.AlignHCenter|QtCore.Qt.AlignmentFlag.AlignVCenter)
@@ -66,7 +70,7 @@ class Ui_Form(object):
         self.verticalLayout.addLayout(self.horizontalLayout)
         self.label_2 = QtWidgets.QLabel(parent=self.frame_main)
         font = QtGui.QFont()
-        font.setFamily("Gadugi")
+        font.setFamily("Century Gothic")
         font.setPointSize(10)
         font.setBold(False)
         font.setItalic(False)
@@ -82,7 +86,7 @@ class Ui_Form(object):
         self.verticalLayout.addWidget(self.le_login)
         self.label_4 = QtWidgets.QLabel(parent=self.frame_main)
         font = QtGui.QFont()
-        font.setFamily("Gadugi")
+        font.setFamily("Century Gothic")
         font.setPointSize(10)
         font.setBold(False)
         font.setItalic(False)
@@ -98,7 +102,7 @@ class Ui_Form(object):
         self.verticalLayout.addWidget(self.le_name)
         self.label_3 = QtWidgets.QLabel(parent=self.frame_main)
         font = QtGui.QFont()
-        font.setFamily("Gadugi")
+        font.setFamily("Century Gothic")
         font.setPointSize(10)
         font.setBold(False)
         font.setItalic(False)
@@ -114,7 +118,7 @@ class Ui_Form(object):
         self.verticalLayout.addWidget(self.le_pwd)
         self.label_5 = QtWidgets.QLabel(parent=self.frame_main)
         font = QtGui.QFont()
-        font.setFamily("Gadugi")
+        font.setFamily("Century Gothic")
         font.setPointSize(10)
         font.setBold(False)
         font.setItalic(False)
@@ -130,7 +134,7 @@ class Ui_Form(object):
         self.verticalLayout.addWidget(self.le_r_pwd)
         self.label_6 = QtWidgets.QLabel(parent=self.frame_main)
         font = QtGui.QFont()
-        font.setFamily("Gadugi")
+        font.setFamily("Century Gothic")
         font.setPointSize(10)
         font.setBold(False)
         font.setItalic(False)
@@ -148,8 +152,7 @@ class Ui_Form(object):
 "QComboBox::drop-down { \n"
 "height: 0px;                    \n"
 "width: 0px;\n"
-"                    \n"
-"                     }")
+"                    }")
         self.cb_hobby.setIconSize(QtCore.QSize(16, 16))
         self.cb_hobby.setFrame(True)
         self.cb_hobby.setObjectName("cb_hobby")
