@@ -22,17 +22,15 @@ class win_enter(enter.Ui_Form, QtWidgets.QWidget):
 		self.pb_reg.clicked.connect(self.show_reg_win)
 		self.pb_enter.clicked.connect(self.login)
 
-
-
 	def login(self):
+		if connect.is_connected() == False:
+			show_base_msg("Нет соединения с сервером. Проверьте подключение и повторите попытку")
+			return
 		if len(self.le_login.text()) != 0 and len(self.le_password.text()) != 0:
 			check = connect.check_login(self.le_login.text())
 
 			if check == False:
-				msg = QtWidgets.QMessageBox()
-				msg.setText(
-					"логин или пароль были введены неправильно, проверьте валидность введных данных и повторите попытку")
-				msg.exec()
+				show_base_msg("логин или пароль были введены неправильно, проверьте валидность введных данных и повторите попытку")
 
 			else:
 				user = connect.get_user_by_login(self.le_login.text())

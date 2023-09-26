@@ -1,6 +1,11 @@
 import requests
 import json
 
+def is_connected():
+    try:
+        return requests.get("https://amn-project-b3b8c-default-rtdb.europe-west1.firebasedatabase.app").ok
+    except requests.ConnectionError:
+        return False
 
 def post_new_user(username, login, pwd, hobby, about_me):  # Загружает данные пользователя в users
     db_url = "https://amn-project-b3b8c-default-rtdb.europe-west1.firebasedatabase.app/users/.json"
