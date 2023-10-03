@@ -27,14 +27,15 @@ class win_enter(enter.Ui_Form, QtWidgets.QWidget):
 			show_base_msg("Нет соединения с сервером. Проверьте подключение и повторите попытку")
 			return
 		if len(self.le_login.text()) != 0 and len(self.le_password.text()) != 0:
-			check = connect.check_login(self.le_login.text())
+			check = connect.get_data(f"/users/{self.le_login.text()}")
 
-			if check == False:
+			if check == None:
 				show_base_msg("логин или пароль были введены неправильно, проверьте валидность введных данных и повторите попытку")
 
 			else:
-				user = connect.get_user_by_login(self.le_login.text())
-				if user["login"] == self.le_login.text() and user["pwd"] == self.le_password.text():
+				user = connect.get_data(f"/users/{self.le_login.text()}")
+				user["login"] = self.le_login.text()
+				if user["pwd"] == self.le_password.text():
 					self.master_win = win_main(user=user)
 					self.master_win.show()
 					self.close()
@@ -60,13 +61,14 @@ class win_reg(reg.Ui_Form, QtWidgets.QWidget):
 
 	def registration(self):
 
-		if connect.check_login(self.le_login.text()) == True:
+		if connect.get_data(f"/users/{self.le_login.text()}") != None:
 			show_base_msg(text="Такой логин уже занят. Попробуйте другой")
 		elif self.le_pwd.text() != self.le_r_pwd.text():
 			show_base_msg(text="Введенные пароли не совпадают.")
 		elif len(self.le_pwd.text()) < 8:
 			show_base_msg(text="Пароль слишком короткий, пожалуйста придумайте более сложный пароль.")
 		else:
+
 			username = self.le_name.text()
 			login    = self.le_login.text()
 			pwd      = self.le_pwd.text()
@@ -78,12 +80,12 @@ class win_reg(reg.Ui_Form, QtWidgets.QWidget):
 			print(pwd)
 			print(hobby)
 			print(about_me)
-			connect.post_new_user(
+			connect.patch_data(
+				url_data=f"/users/{login}",
 				username=username,
-				login=login,
 				pwd=pwd,
 				hobby=hobby,
-				about_me=about_me
+				ab_me=about_me
 			)
 
 			show_base_msg(text="Учетная запись успешно создана, теперь вы можете войти")
@@ -129,18 +131,18 @@ class win_main(main_win.Ui_Form, QtWidgets.QWidget):
 			self.user["hobby"] = self.cb_hobby.currentIndex() if self.cb_hobby.currentIndex() != self.user["hobby"] else self.user["hobby"]
 			self.user["ab_me"] = self.pte_about.toPlainText() if self.pte_about.toPlainText() != self.user["ab_me"] else self.user["ab_me"]
 
-			connect.edit_user_by_login(
-				login=self.user["login"],
+			connect.patch_data(
+				url_data=f'/users/{self.user["login"]}/',
 				username=self.user["username"],
 				pwd=self.user["pwd"],
 				hobby=self.user["hobby"],
-				about_me=self.user["ab_me"]
+				ab_me=self.user["ab_me"]
 			)
 			show_base_msg(text="Изменения были успешно внесены")
 
 	def show_hello_page(self):
 		with open("data/entered.txt", "w") as f:
-			f.write(str(self.comboBox.currentIndex()))
+			f.write(str(self.cb_hobby.currentIndex()))
 
 
 if __name__ == "__main__":
