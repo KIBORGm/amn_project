@@ -1,4 +1,4 @@
-# Form implementation generated from reading ui file '.\uis\main_win.ui'
+# Form implementation generated from reading ui file 'main_win.ui'
 #
 # Created by: PyQt6 UI code generator 6.5.2
 #
@@ -13,6 +13,9 @@ class Ui_Form(object):
     def setupUi(self, Form):
         Form.setObjectName("Form")
         Form.resize(1086, 564)
+        icon = QtGui.QIcon()
+        icon.addPixmap(QtGui.QPixmap("icons/app_ico.png"), QtGui.QIcon.Mode.Normal, QtGui.QIcon.State.Off)
+        Form.setWindowIcon(icon)
         Form.setStyleSheet("font: 10pt \"Century Gothic\";\n"
 "")
         self.horizontalLayout = QtWidgets.QHBoxLayout(Form)
@@ -41,7 +44,7 @@ class Ui_Form(object):
         self.label_2.setMinimumSize(QtCore.QSize(48, 48))
         self.label_2.setStyleSheet("")
         self.label_2.setText("")
-        self.label_2.setPixmap(QtGui.QPixmap(".\\uis\\../icons/main_ico.png"))
+        self.label_2.setPixmap(QtGui.QPixmap("../icons/main_ico.png"))
         self.label_2.setScaledContents(True)
         self.label_2.setObjectName("label_2")
         self.horizontalLayout_2.addWidget(self.label_2)
@@ -387,9 +390,9 @@ class Ui_Form(object):
         self.pb_add_group = QtWidgets.QPushButton(parent=self.frame_5)
         self.pb_add_group.setStyleSheet("")
         self.pb_add_group.setText("")
-        icon = QtGui.QIcon()
-        icon.addPixmap(QtGui.QPixmap(".\\uis\\../icons/group_add_FILL0_wght400_GRAD0_opsz24.png"), QtGui.QIcon.Mode.Normal, QtGui.QIcon.State.Off)
-        self.pb_add_group.setIcon(icon)
+        icon1 = QtGui.QIcon()
+        icon1.addPixmap(QtGui.QPixmap("../icons/group_add_FILL0_wght400_GRAD0_opsz24.png"), QtGui.QIcon.Mode.Normal, QtGui.QIcon.State.Off)
+        self.pb_add_group.setIcon(icon1)
         self.pb_add_group.setIconSize(QtCore.QSize(24, 24))
         self.pb_add_group.setObjectName("pb_add_group")
         self.horizontalLayout_6.addWidget(self.pb_add_group)
@@ -398,9 +401,9 @@ class Ui_Form(object):
 "border-color: qlineargradient(spread:pad, x1:0, y1:0, x2:0.869, y2:0.403818, stop:0 rgba(46, 183, 169, 255), stop:1 rgba(255, 146, 255, 255));\n"
 "border: 1px")
         self.pb_del_group.setText("")
-        icon1 = QtGui.QIcon()
-        icon1.addPixmap(QtGui.QPixmap(".\\uis\\../icons/group_off_FILL0_wght400_GRAD0_opsz24 (1).png"), QtGui.QIcon.Mode.Normal, QtGui.QIcon.State.Off)
-        self.pb_del_group.setIcon(icon1)
+        icon2 = QtGui.QIcon()
+        icon2.addPixmap(QtGui.QPixmap("../icons/group_off_FILL0_wght400_GRAD0_opsz24 (1).png"), QtGui.QIcon.Mode.Normal, QtGui.QIcon.State.Off)
+        self.pb_del_group.setIcon(icon2)
         self.pb_del_group.setIconSize(QtCore.QSize(24, 24))
         self.pb_del_group.setObjectName("pb_del_group")
         self.horizontalLayout_6.addWidget(self.pb_del_group, 0, QtCore.Qt.AlignmentFlag.AlignHCenter|QtCore.Qt.AlignmentFlag.AlignVCenter)
