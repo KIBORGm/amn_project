@@ -7,11 +7,15 @@
     <x>0</x>
     <y>0</y>
     <width>501</width>
-    <height>66</height>
+    <height>85</height>
    </rect>
   </property>
   <property name="windowTitle">
    <string>Form</string>
+  </property>
+  <property name="windowIcon">
+   <iconset>
+    <normaloff>icons/app_ico.png</normaloff>icons/app_ico.png</iconset>
   </property>
   <property name="styleSheet">
    <string notr="true">#Form{

@@ -15,7 +15,7 @@
   </property>
   <property name="windowIcon">
    <iconset>
-    <normaloff>../icons/app_ico.png</normaloff>../icons/app_ico.png</iconset>
+    <normaloff>icons/app_ico.png</normaloff>icons/app_ico.png</iconset>
   </property>
   <property name="styleSheet">
    <string notr="true">#Form{

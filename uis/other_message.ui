@@ -24,6 +24,10 @@
   <property name="windowTitle">
    <string>Form</string>
   </property>
+  <property name="windowIcon">
+   <iconset>
+    <normaloff>icons/app_ico.png</normaloff>icons/app_ico.png</iconset>
+  </property>
   <property name="styleSheet">
    <string notr="true">#frame_your_msg{
 background-color: rgb(227, 227, 227);
